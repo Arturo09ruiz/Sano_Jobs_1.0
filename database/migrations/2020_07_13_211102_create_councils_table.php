@@ -16,12 +16,12 @@ class CreateCouncilsTable extends Migration
         Schema::create('councils', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name',128);
-            $table->unsignedBigInteger('countries_id')->unsigned();
+            $table->unsignedBigInteger('country_id')->unsigned();
             $table->timestamps();
 
 
             //Relacion
-            $table->foreign('countries_id')->references('id')->on('countries');
+            $table->foreign('country_id')->references('id')->on('countries');
         });
     }
 

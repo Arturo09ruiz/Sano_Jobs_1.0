@@ -16,15 +16,15 @@ class CreateCitiesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 128);
-            $table->unsignedBigInteger('councils_id')->unsigned();
-            $table->unsignedBigInteger('countries_id')->unsigned();
+            $table->unsignedBigInteger('conuncil_id')->unsigned();
+            $table->unsignedBigInteger('country_id')->unsigned();
             $table->timestamps();
 
 
 
             //Relacion
-            $table->foreign('councils_id')->references('id')->on('councils');
-            $table->foreign('countries_id')->references('id')->on('countries');
+            $table->foreign('conuncil_id')->references('id')->on('councils');
+            $table->foreign('country_id')->references('id')->on('countries');
 
         });
     }
