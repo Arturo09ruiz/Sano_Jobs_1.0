@@ -15,7 +15,14 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name', 128);
+            $table->unsignedBigInteger('councils_id')->unsigned();
             $table->timestamps();
+
+
+
+            //Relacion
+            $table->foreign('councils_id')->references('id')->on('councils');
         });
     }
 
