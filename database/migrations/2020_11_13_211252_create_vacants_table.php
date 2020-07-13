@@ -17,18 +17,19 @@ class CreateVacantsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 128);
             $table->text('description');
+            $table->text('requirements');
             $table->string('business', 128);
             $table->string('email', 128);
             $table->string('telefono', 128);
             $table->date('deadline');
             $table->enum('status', ['PUBLISHED', 'DEAD'])->default('PUBLISHED');
-            $table->unsignedBigInteger('user_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('city_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('conuncil_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('country_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('role_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('team_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('category_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->unsignedBigInteger('city_id')->unsigned();
+            $table->unsignedBigInteger('conuncil_id')->unsigned();
+            $table->unsignedBigInteger('country_id')->unsigned();
+            $table->unsignedBigInteger('role_id')->unsigned();
+            $table->unsignedBigInteger('team_id')->unsigned();
+            $table->unsignedBigInteger('category_id')->unsigned();
             $table->timestamps();
 
 
@@ -46,7 +47,6 @@ class CreateVacantsTable extends Migration
 
 
 
-            $table->timestamps();
         });
     }
 
