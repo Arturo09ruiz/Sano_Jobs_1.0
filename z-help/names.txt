@@ -1,0 +1,26 @@
+Modulo Categorias :
+category - categories 
+
+Modulo Paises:
+country - countries
+
+Modulo Consejos:
+conuncil - conuncils
+
+Modulo Ciudades:
+City- Cities
+
+Modulo Roles:
+role - roles
+
+Modulo Equipos:
+Team - teams
+
+Modulo Usuarios:
+User - Users
+
+Modulo Vacantes  :
+vacant  - vacants
+
+
+
