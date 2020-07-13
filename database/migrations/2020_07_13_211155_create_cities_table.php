@@ -16,13 +16,16 @@ class CreateCitiesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 128);
+            $table->unsignedBigInteger('countries_id')->unsigned();
             $table->unsignedBigInteger('councils_id')->unsigned();
             $table->timestamps();
 
 
 
             //Relacion
+            $table->foreign('countries_id')->references('id')->on('countries');
             $table->foreign('councils_id')->references('id')->on('councils');
+
         });
     }
 
