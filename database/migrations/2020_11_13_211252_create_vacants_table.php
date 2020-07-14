@@ -27,7 +27,6 @@ class CreateVacantsTable extends Migration
             $table->unsignedBigInteger('city_id')->unsigned();
             $table->unsignedBigInteger('conuncil_id')->unsigned();
             $table->unsignedBigInteger('country_id')->unsigned();
-            $table->unsignedBigInteger('role_id')->unsigned();
             $table->unsignedBigInteger('team_id')->unsigned();
             $table->unsignedBigInteger('category_id')->unsigned();
             $table->timestamps();
@@ -40,7 +39,6 @@ class CreateVacantsTable extends Migration
             $table->foreign('city_id')->references('id')->on('cities');
             $table->foreign('conuncil_id')->references('id')->on('councils');
             $table->foreign('country_id')->references('id')->on('countries');
-            $table->foreign('role_id')->references('id')->on('roles');
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('category_id')->references('id')->on('categories');
 
