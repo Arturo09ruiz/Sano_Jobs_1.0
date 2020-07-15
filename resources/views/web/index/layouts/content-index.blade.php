@@ -87,7 +87,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-10 mx-md-auto">
-            <img class="ml-lg-5" src="assets/img/ill/ill.png" width="100%">
+            <img class="ml-lg-5" src="{{ asset('img/2.png') }}" width="100%">
           </div>
         </div>
       </div>
