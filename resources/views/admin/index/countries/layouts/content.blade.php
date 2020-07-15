@@ -87,7 +87,7 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Paises Registradas</h3>
+                  <h3 class="mb-0">Paises Registrados</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
