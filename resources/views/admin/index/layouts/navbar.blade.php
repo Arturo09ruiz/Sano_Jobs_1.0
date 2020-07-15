@@ -11,6 +11,7 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+            @if (auth()->user()->role_id  == '1')
             <li class="nav-item">
               <a class="nav-link active" href="#">
                 <i class="ni ni-tv-2 text-primary"></i>
@@ -20,7 +21,7 @@
             <li class="nav-item">
               <a class="nav-link" href="vacantes_gerente.html">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Vacantes</span>
+                <span class="nav-link-text">Categorías</span>
               </a>
             </li>
             <li class="nav-item">
@@ -29,6 +30,10 @@
                 <span class="nav-link-text">Reportes</span>
               </a>
             </li>
+
+            @endif
+
+
 
           </ul>
           <!-- Divider -->
