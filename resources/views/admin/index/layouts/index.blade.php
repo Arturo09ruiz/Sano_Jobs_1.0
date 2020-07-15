@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="{{ asset('admin/fonts/1.css') }}">
   <!-- Icons -->
   <link rel="stylesheet" href="{{ asset('admin/vendor/nucleo/nucleo.css') }}" type="text/css">
-  <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
   <!-- Page plugins -->
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
 </head>
 
 <body>
