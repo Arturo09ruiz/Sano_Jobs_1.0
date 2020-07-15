@@ -97,6 +97,7 @@
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
+                        <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
                     </thead>
                     <tbody class="list">
@@ -118,6 +119,17 @@
                             <span class="status"> {{$category->created_at}}</span>
                           </span>
                         </td>
+                        <td>
+                            <span class="badge badge-dot mr-4">
+                              <span class="status">
+                                  <form method="POST" action="{{route('categories.destroy', $category->id)}}">
+                                    @csrf
+                                    @method('DELETE')
+                                      <button class="btn btn-danger">Eliminar</button>
+                                  </form>
+                              </span>
+                            </span>
+                          </td>
                       </tr>
                       @endforeach
 
