@@ -25,7 +25,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="reportes_gerente.html">
+              <a class="nav-link" href="{{route('countries.index')}}">
                 <i class="fa fa-globe-americas "></i>
                 <span class="nav-link-text">Paises</span>
               </a>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Country;
+
+
 class CountriesController extends Controller
 {
     /**
@@ -14,7 +17,8 @@ class CountriesController extends Controller
      */
     public function index()
     {
-        //
+        $countries = Country::orderby('id', 'DESC')->paginate(10);
+        return view('admin.index.countries.index', compact('countries'));
     }
 
     /**
