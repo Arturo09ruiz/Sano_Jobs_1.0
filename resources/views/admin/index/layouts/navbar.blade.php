@@ -41,8 +41,8 @@
           <ul class="navbar-nav mb-md-3">
 
             <li class="nav-item">
-              <a class="nav-link active active-pro" href="examples/upgrade.html">
-                <i class="ni ni-send text-dark"></i>
+              <a class="nav-link active active-pro" href="">
+                <i class="fa fa fa-headset"></i>
                 <span class="nav-link-text">Soporte Técnico</span>
               </a>
             </li>
