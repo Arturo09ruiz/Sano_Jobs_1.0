@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Cities;
+use App\City;
 use App\Council;
 use App\Country;
 
@@ -19,7 +19,8 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        
+        $cities = City::orderby('id', 'DESC')->paginate(10);
+        return view('admin.index.cities.index', compact('cities'));
     }
 
     /**
