@@ -22,19 +22,26 @@
                     </div>
                 </div>
             </div>
-            <!-- ocult -->
+
+            @if (Auth::check())
+
+
+            
             <ul class="navbar-nav ml-lg-auto">
+
+                @if (auth()->user()->role_id  == '1')
+
                 <button class="btn btn-primary d-lg-none">
 
                 <li class="nav-item d-lg-none">
-                    <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+                    <a class="nav-link nav-link-icon">
                         <i class="letra fa fa-user-o mr-2"></i>
-                        <span class="letra ">Iniciar Sesion</span>
+                        <span class="letra ">Panel Administrativo</span>
                     </a>
                 </li>
             </button>
 
-<!-- show -->
+            <!-- show -->
                 <li class="nav-item prueba">
                     <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
                         <span class="btn-inner--icon">
@@ -44,32 +51,126 @@
                       </a>
                 </li>
                 <br>
+            @elseif(auth()->user()->role_id  == '2')
+
+            <button class="btn btn-primary d-lg-none">
+
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+                        <i class="letra fa fa-user-o mr-2"></i>
+                        <span class="letra ">Iniciar Sesion</span>
+                    </a>
+                </li>
+            </button>
+
+            <!-- show -->
+                <li class="nav-item prueba">
+                    <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
+                        <span class="btn-inner--icon">
+                          <i class="fa fa-user-o mr-2"></i>
+                        </span>
+                        <span class="nav-link-inner--text">Iniciar Sesión</span>
+                      </a>
+                </li>
+                <br>
+            @endif
+
+
+
+
+
+
+
+
+
             <button class="btn btn-primary d-lg-none">
                 <li class="nav-item d-lg-none">
 
-                    <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+                    <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();"
+                     {{ __('Logout') }} class="nav-link nav-link-icon" >
                         <span class="btn-inner--icon">
-                            <i class="letra fa fa-address-book"></i>
+                            <i class="letra fa fa-sign-out "></i>
                           </span>
-                          <span class="letra">Registrate</span>
+                          <span class="letra">Cerrar Sesión</span>
                     </a>
 
                 </li>
             </button>
-<!-- show -->
+            <!-- show -->
                 <li class="nav-item prueba">
-                    <a href="" data-toggle="modal" data-target="#exampleModal" class="btn btn-neutral btn-icon">
+                    <a class="btn btn-neutral btn-icon" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();"
+                     {{ __('Logout') }}>
                         <span class="btn-inner--icon">
-                          <i class="fa fa-address-book"></i>
+                          <i class="fa fa-sign-out "></i>
                         </span>
-                        <span class="nav-link-inner--text">Registrate</span>
+                        <span class="nav-link-inner--text">Cerrar Sesión</span>
                       </a>
                 </li>
-
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
 
 
 
             </ul>
+
+
+            @else
+   <!-- ocult -->
+   <ul class="navbar-nav ml-lg-auto">
+    <button class="btn btn-primary d-lg-none">
+
+    <li class="nav-item d-lg-none">
+        <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+            <i class="letra fa fa-user-o mr-2"></i>
+            <span class="letra ">Iniciar Sesion</span>
+        </a>
+    </li>
+</button>
+
+<!-- show -->
+    <li class="nav-item prueba">
+        <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-user-o mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Iniciar Sesión</span>
+          </a>
+    </li>
+    <br>
+<button class="btn btn-primary d-lg-none">
+    <li class="nav-item d-lg-none">
+
+        <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+            <span class="btn-inner--icon">
+                <i class="letra fa fa-address-book"></i>
+              </span>
+              <span class="letra">Registrate</span>
+        </a>
+
+    </li>
+</button>
+<!-- show -->
+    <li class="nav-item prueba">
+        <a href="" data-toggle="modal" data-target="#exampleModal" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-address-book"></i>
+            </span>
+            <span class="nav-link-inner--text">Registrate</span>
+          </a>
+    </li>
+
+
+
+
+</ul>
+            @endif
+
+
 
         </div>
     </div>
