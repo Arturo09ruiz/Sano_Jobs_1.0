@@ -39,9 +39,9 @@
     <script src="{{ asset('admin/vendor/jquery-scroll-lock/jquery-scrollLock.min.js') }}"></script>
     <!-- Optional JS -->
     <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/chart.js/Chart.extension.js') }} "></script>
-    <!-- Argon JS -->
-    <script src="assets/js/argon.js?v=1.2.0"></script>
+    <script src="{{ asset('admin/vendor/chart.js/Chart.extension.js') }}"></script>
+    <!-- Arturo JS -->
+    <script src="{{ asset('admin/js/1.js') }}"></script>
 
 </body>
 </html>
