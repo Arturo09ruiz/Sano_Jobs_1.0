@@ -18,3 +18,7 @@ Route::get('/', 'Web\PageController@index')->name('index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/panel-administrativo', 'Admin\PageController@index')->name('admin');
+
