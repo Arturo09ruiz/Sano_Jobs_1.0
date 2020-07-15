@@ -22,6 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Admin
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/panel-administrativo', 'Admin\PageController@index')->name('admin');
+    Route::get('/panel-administrativo', 'Admin\AdminController@index')->name('admin');
 
 });
