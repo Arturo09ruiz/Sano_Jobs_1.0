@@ -19,7 +19,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="vacantes_gerente.html">
+              <a class="nav-link" href="{{route('categories')}}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Categorías</span>
               </a>
@@ -27,7 +27,7 @@
             <li class="nav-item">
               <a class="nav-link" href="reportes_gerente.html">
                 <i class="fa fa-chart-area text-info"></i>
-                <span class="nav-link-text">Reportes</span>
+                <span class="nav-link-text">Paises</span>
               </a>
             </li>
 
