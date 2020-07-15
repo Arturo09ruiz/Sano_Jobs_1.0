@@ -74,7 +74,7 @@
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                  <a href="#" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
+                  <a href="#"  data-toggle="modal" data-target="#registrar_categoria" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>
             </div>
@@ -165,3 +165,5 @@
       </footer>
     </div>
   </div>
+
+@include('admin.index.categories.layouts.create')
