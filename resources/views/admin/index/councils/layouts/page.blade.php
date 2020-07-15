@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
   <!-- Page plugins -->
   <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ asset('admin/css/1.css') }}" type="text/css">
+
 </head>
 
 <body>
@@ -42,8 +44,15 @@
     <!-- Optional JS -->
     <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/chart.js/Chart.extension.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
     <!-- Arturo JS -->
     <script src="{{ asset('admin/js/1.js') }}"></script>
-
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+          $(document).ready(function() {
+          $('.js-example-basic-single').select2();
+      });
+      </script>
 </body>
 </html>

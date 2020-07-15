@@ -40,7 +40,8 @@ class CouncilsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $council = Council::create($request->all());
+        return back();
     }
 
     /**
