@@ -13,7 +13,7 @@
           <ul class="navbar-nav">
             @if (auth()->user()->role_id  == '1')
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link active" href="{{route('admin')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Panel de Control</span>
               </a>
