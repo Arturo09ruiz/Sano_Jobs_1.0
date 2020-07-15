@@ -32,7 +32,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('councils.index')}}">
-                  <i class="fa fa-building "></i>
+                  <i class="fa fa-building"></i>
                   <span class="nav-link-text">Consejos</span>
                 </a>
             </li>

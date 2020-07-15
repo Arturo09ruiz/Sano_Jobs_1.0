@@ -17,9 +17,9 @@ class CouncilsController extends Controller
      */
     public function index()
     {
-        $countries = Country::orderby('id', 'DESC');
+        $countries = Country::all();
         $councils = Council::orderby('id', 'DESC')->paginate(10);
-        return view('admin.index.councils.index', compact('councils','countries'));
+        return view('admin.index.councils.index', compact('countries','councils'));
     }
 
     /**
