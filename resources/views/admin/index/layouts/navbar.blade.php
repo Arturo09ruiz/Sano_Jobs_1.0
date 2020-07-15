@@ -48,6 +48,12 @@
                   <span class="nav-link-text">Roles</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="reportes_gerente.html">
+                  <i class="fa fa-chart-area text-info"></i>
+                  <span class="nav-link-text">Equipos</span>
+                </a>
+            </li>
 
             @endif
 
