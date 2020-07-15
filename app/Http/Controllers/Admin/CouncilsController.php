@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Council;
+use App\Country;
+
 
 class CouncilsController extends Controller
 {
@@ -14,7 +17,9 @@ class CouncilsController extends Controller
      */
     public function index()
     {
-        //
+        $countries = Country::orderby('id', 'DESC');
+        $councils = Council::orderby('id', 'DESC')->paginate(10);
+        return view('admin.index.councils.index', compact('councils','countries'));
     }
 
     /**
