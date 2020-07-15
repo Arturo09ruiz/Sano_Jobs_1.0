@@ -19,7 +19,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('categorias.index')}}">
+              <a class="nav-link" href="{{route('categories.index')}}">
                 <i class="ni ni-bullet-list-67 "></i>
                 <span class="nav-link-text">Categorías</span>
               </a>
