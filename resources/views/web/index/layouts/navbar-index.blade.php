@@ -34,7 +34,7 @@
                 <button class="btn btn-primary d-lg-none">
 
                 <li class="nav-item d-lg-none">
-                    <a class="nav-link nav-link-icon">
+                    <a href="{{route('admin')}}" class="nav-link nav-link-icon">
                         <i class="letra fa fa-desktop mr-2"></i>
                         <span class="letra ">Panel Administrativo</span>
                     </a>
@@ -43,7 +43,7 @@
 
             <!-- show -->
                 <li class="nav-item prueba">
-                    <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
+                    <a href="{{route('admin')}}" class="btn btn-neutral btn-icon">
                         <span class="btn-inner--icon">
                           <i class="fa fa-desktop mr-2"></i>
                         </span>
