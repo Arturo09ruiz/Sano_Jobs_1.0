@@ -19,50 +19,50 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('categories')}}">
-                <i class="ni ni-bullet-list-67 text-default"></i>
+              <a class="nav-link" href="">
+                <i class="ni ni-bullet-list-67 "></i>
                 <span class="nav-link-text">Categorías</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="reportes_gerente.html">
-                <i class="fa fa-chart-area text-info"></i>
+                <i class="fa fa-globe-americas "></i>
                 <span class="nav-link-text">Paises</span>
               </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-building "></i>
                   <span class="nav-link-text">Consejos</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-city "></i>
                   <span class="nav-link-text">Ciudades</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-user-tag"></i>
                   <span class="nav-link-text">Roles</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-users"></i>
                   <span class="nav-link-text">Equipos</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-user"></i>
                   <span class="nav-link-text">Usuarios</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="reportes_gerente.html">
-                  <i class="fa fa-chart-area text-info"></i>
+                  <i class="fa fa-wpforms"></i>
                   <span class="nav-link-text">Vacantes</span>
                 </a>
             </li>
