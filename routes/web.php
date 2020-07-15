@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('categories', 'Admin\CategoriesController');
     Route::resource('countries', 'Admin\CountriesController');
     Route::resource('councils', 'Admin\CouncilsController');
+    Route::resource('cities', 'Admin\CitiesController');
+
 
 
 
