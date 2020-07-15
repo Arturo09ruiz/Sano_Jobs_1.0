@@ -5,6 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Cities;
+use App\Council;
+use App\Country;
+
+
 class CitiesController extends Controller
 {
     /**
@@ -14,7 +19,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
