@@ -26,7 +26,7 @@
             @if (Auth::check())
 
 
-            
+
             <ul class="navbar-nav ml-lg-auto">
 
                 @if (auth()->user()->role_id  == '1')
@@ -35,7 +35,7 @@
 
                 <li class="nav-item d-lg-none">
                     <a class="nav-link nav-link-icon">
-                        <i class="letra fa fa-user-o mr-2"></i>
+                        <i class="letra fa fa-desktop mr-2"></i>
                         <span class="letra ">Panel Administrativo</span>
                     </a>
                 </li>
@@ -45,34 +45,16 @@
                 <li class="nav-item prueba">
                     <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
                         <span class="btn-inner--icon">
-                          <i class="fa fa-user-o mr-2"></i>
+                          <i class="fa fa-desktop mr-2"></i>
                         </span>
-                        <span class="nav-link-inner--text">Iniciar Sesión</span>
+                        <span class="nav-link-inner--text">Panel Administrativo</span>
                       </a>
                 </li>
                 <br>
             @elseif(auth()->user()->role_id  == '2')
 
-            <button class="btn btn-primary d-lg-none">
 
-                <li class="nav-item d-lg-none">
-                    <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
-                        <i class="letra fa fa-user-o mr-2"></i>
-                        <span class="letra ">Iniciar Sesion</span>
-                    </a>
-                </li>
-            </button>
 
-            <!-- show -->
-                <li class="nav-item prueba">
-                    <a  data-toggle="modal" data-target="#inicioModal" class="btn btn-neutral btn-icon">
-                        <span class="btn-inner--icon">
-                          <i class="fa fa-user-o mr-2"></i>
-                        </span>
-                        <span class="nav-link-inner--text">Iniciar Sesión</span>
-                      </a>
-                </li>
-                <br>
             @endif
 
 
