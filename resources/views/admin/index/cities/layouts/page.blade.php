@@ -22,7 +22,7 @@
 
 <body>
     @include('admin.index.layouts.navbar')
-    @include('admin.index.councils.layouts.content')
+    @include('admin.index.cities.layouts.content')
 
 
 

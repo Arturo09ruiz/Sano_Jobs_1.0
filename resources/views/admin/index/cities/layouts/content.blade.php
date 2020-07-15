@@ -64,17 +64,17 @@
             <div class="header-body">
               <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Consejos Registrados</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">Ciudades Registradas</h6>
 
                   <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                       <li class="breadcrumb-item"><a href="{{route('admin')}}"><i class="fas fa-home"></i></a></li>
-                      <li class="breadcrumb-item active"><a href="#">Consejos</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Ciudades</a></li>
                     </ol>
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                  <a href="#"  data-toggle="modal" data-target="#registrar_consejo" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
+                  <a href="#"  data-toggle="modal" data-target="#registrar_ciudad" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Consejos Registrados</h3>
+                  <h3 class="mb-0">Ciudades Registrados</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -96,37 +96,36 @@
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
+                        <th scope="col" class="sort" data-sort="budget">Consejo</th>
                         <th scope="col" class="sort" data-sort="budget">Pais</th>
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
                         <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
                     </thead>
                     <tbody class="list">
-                        @foreach ($councils as $council )
+                        @foreach ($cities as $city )
 
                       <tr>
                         <th scope="row">
                           <div class="media align-items-center">
                             <div class="media-body">
-                              <span class="name mb-0 text-sm">{{$council->id}}</span>
+                              <span class="name mb-0 text-sm">{{$city->id}}</span>
                             </div>
                           </div>
                         </th>
                         <td class="budget">
-                            {{$council->name}}
+                            {{$city->name}}
                         </td>
-                        <td class="budget">
-                            {{$council->country->name}}
-                        </td>
+
                         <td>
                           <span class="badge badge-dot mr-4">
-                            <span class="status"> {{$council->created_at}}</span>
+                            <span class="status"> {{$city->created_at}}</span>
                           </span>
                         </td>
                         <td>
                             <span class="badge badge-dot mr-4">
                               <span class="status">
-                                  <form method="POST" action="{{route('councils.destroy', $council->id)}}">
+                                  <form method="POST" action="{{route('cities.destroy', $city->id)}}">
                                     @csrf
                                     @method('DELETE')
                                       <button class="btn btn-danger">Eliminar</button>
@@ -147,7 +146,7 @@
                 <div class="card-footer py-4">
                   <nav aria-label="...">
                     <ul class="pagination justify-content-end mb-0">
-                        {{$councils->render()}}
+                        {{$cities->render()}}
 
                     </ul>
                   </nav>
@@ -183,4 +182,4 @@
 
   </div>
 
-@include('admin.index.councils.layouts.create')
+@include('admin.index.cities.layouts.create')
