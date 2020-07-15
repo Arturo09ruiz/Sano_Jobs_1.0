@@ -1,27 +1,23 @@
 
 /*!
-
 =========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
-* Coded by www.creative-tim.com
-
+*  Vacantes de Empleo |Panel Administrativo | Arturo Ruiz
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* Copyright Arturo Ruiz (https://github.com/Arturo09ruiz)
 
-*/
+Coded by Arturo Ruiz (https://www.facebook.com/profile.php?id=100008188358401)
+=========================================================
 
 
+ */
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-//
-// Layout
-//
 
 'use strict';
 
@@ -614,7 +610,7 @@ var NavbarCollapse = (function() {
 				 $('body').removeClass('nav-open');
 					navbar_menu_visible = 0;
 					$('.bodyClick').remove();
-					
+
 			 });
 
 		 $('body').addClass('nav-open');
@@ -1087,234 +1083,234 @@ var Scrollbar = (function() {
 
 })();
 
-var data=['Henry Silva', 'Pedro Perez', 'David Guetta', 'Jose Martinez', 'Aviici', 'Michael Jackson'];
+// var data=['Henry Silva', 'Pedro Perez', 'David Guetta', 'Jose Martinez', 'Aviici', 'Michael Jackson'];
 
-var ctx = document.getElementById('myChartt');
-var ctx = document.getElementById('myChartt').getContext('2d');
-var ctx = $('#myChartt');
-var ctx = 'myChartt';
+// var ctx = document.getElementById('myChartt');
+// var ctx = document.getElementById('myChartt').getContext('2d');
+// var ctx = $('#myChartt');
+// var ctx = 'myChartt';
 
-var ctx = document.getElementById('myChartt');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: data,
-        datasets: [{
-            label: '# of Votes',
-            data: [20, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-
-
-
-var ctx = document.getElementById('myChart');
-var ctx = document.getElementById('myChart').getContext('2d');
-var ctx = $('#myChart');
-var ctx = 'myChart';
-
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Henry Silva', 'Pedro Perez', 'David Guetta', 'Jose Martinez', 'Aviici', 'Michael Jackson'],
-        datasets: [{
-            label: '# of Votes',
-            data: [20, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+// var ctx = document.getElementById('myChartt');
+// var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: {
+//         labels: data,
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [20, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 
 
-var ctx = document.getElementById('myChartCitis');
-var ctx = document.getElementById('myChartCitis').getContext('2d');
-var ctx = $('#myChartCitis');
-var ctx = 'myChartCitis';
+// var ctx = document.getElementById('myChart');
+// var ctx = document.getElementById('myChart').getContext('2d');
+// var ctx = $('#myChart');
+// var ctx = 'myChart';
 
-var ctx = document.getElementById('myChartCitis');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Ciudad Bolívar', 'Puerto Ordaz', 'Barcelona', 'Puerto la Cruz', 'Caracas', 'Valencia'],
-        datasets: [{
-            label: '# of Votes',
-            data: [2, 4, 6, 8, 10, 12],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-
-
+// var ctx = document.getElementById('myChart');
+// var myChart = new Chart(ctx, {
+//     type: 'pie',
+//     data: {
+//         labels: ['Henry Silva', 'Pedro Perez', 'David Guetta', 'Jose Martinez', 'Aviici', 'Michael Jackson'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [20, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 
 
-var ctx = document.getElementById('myChartConsejo');
-var ctx = document.getElementById('myChartConsejo').getContext('2d');
-var ctx = $('#myChartConsejo');
-var ctx = 'myChartConsejo';
+// var ctx = document.getElementById('myChartCitis');
+// var ctx = document.getElementById('myChartCitis').getContext('2d');
+// var ctx = $('#myChartCitis');
+// var ctx = 'myChartCitis';
 
-var ctx = document.getElementById('myChartConsejo');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Barcelona', 'Maracaibo', 'Caracas', 'Valencia'],
-        datasets: [{
-            label: '# of Votes',
-            data: [2, 4, 6, 8,],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+// var ctx = document.getElementById('myChartCitis');
+// var myChart = new Chart(ctx, {
+//     type: 'pie',
+//     data: {
+//         labels: ['Ciudad Bolívar', 'Puerto Ordaz', 'Barcelona', 'Puerto la Cruz', 'Caracas', 'Valencia'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [2, 4, 6, 8, 10, 12],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 
 
 
 
-var ctx = document.getElementById('myChartPais');
-var ctx = document.getElementById('myChartPais').getContext('2d');
-var ctx = $('#myChartPais');
-var ctx = 'myChartPais';
+// var ctx = document.getElementById('myChartConsejo');
+// var ctx = document.getElementById('myChartConsejo').getContext('2d');
+// var ctx = $('#myChartConsejo');
+// var ctx = 'myChartConsejo';
 
-var ctx = document.getElementById('myChartPais');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Venezuela', 'Colombia', 'Peru', 'Ecuador', 'Bolivia'],
-        datasets: [{
-            label: '# of Votes',
-            data: [2000, 400, 600, 800, 300,],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+// var ctx = document.getElementById('myChartConsejo');
+// var myChart = new Chart(ctx, {
+//     type: 'pie',
+//     data: {
+//         labels: ['Barcelona', 'Maracaibo', 'Caracas', 'Valencia'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [2, 4, 6, 8,],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
+
+
+
+
+
+// var ctx = document.getElementById('myChartPais');
+// var ctx = document.getElementById('myChartPais').getContext('2d');
+// var ctx = $('#myChartPais');
+// var ctx = 'myChartPais';
+
+// var ctx = document.getElementById('myChartPais');
+// var myChart = new Chart(ctx, {
+//     type: 'pie',
+//     data: {
+//         labels: ['Venezuela', 'Colombia', 'Peru', 'Ecuador', 'Bolivia'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [2000, 400, 600, 800, 300,],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 
 
