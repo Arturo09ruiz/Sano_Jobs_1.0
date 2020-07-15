@@ -48,11 +48,16 @@
 
     <!-- Arturo JS -->
     <script src="{{ asset('admin/js/1.js') }}"></script>
+    <script src="{{ asset('admin/js/2.js') }}"></script>
+
     <script>
         // In your Javascript (external .js resource or <script> tag)
           $(document).ready(function() {
           $('.js-example-basic-single').select2();
       });
+      $("country").change(function(){
+    alert("The text has been changed.");
+  });
       </script>
 </body>
 </html>

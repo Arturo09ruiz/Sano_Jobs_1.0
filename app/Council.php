@@ -15,4 +15,6 @@ class Council extends Model
     {
         return $this->belongsTo('App\Country', 'country_id', 'id');
     }
+
+ 
 }

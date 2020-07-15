@@ -24,12 +24,26 @@
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
 
-                      <select class="js-example-basic-single form-control" required name="country_id">
+                      <select id="country" class="js-example-basic-single form-control" required name="country_id">
                         <option value="" disabled selected>Selecciona el Pais</option>
+
+                          @foreach ($countries as $country)
+                          <option value="{{$country->id}}" >{{$country->name}}</option>
+
+                          @endforeach
 
                     </select>
 
-                    <select class="js-example-basic-single form-control" required name="council_id">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+
+
+                    <select  class="js-example-basic-single form-control" required name="council_id">
                         <option value="" disabled selected>Selecciona el Consejo</option>
 
                     </select>
@@ -46,3 +60,4 @@
       </div>
     </div>
   </div>
+sc
