@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
   <!-- Page plugins -->
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('admin/css/1.css') }}" type="text/css">
 </head>
 
 <body>
