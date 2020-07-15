@@ -20,6 +20,8 @@
 
 <body>
     @include('admin.index.layouts.navbar')
+    @include('admin.index.layouts.content')
+
 
 
 
