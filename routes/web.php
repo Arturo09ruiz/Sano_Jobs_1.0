@@ -25,6 +25,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/panel-administrativo', 'Admin\AdminController@index')->name('admin');
     Route::resource('categories', 'Admin\CategoriesController');
     Route::resource('countries', 'Admin\CountriesController');
+    Route::resource('councils', 'Admin\CouncilsController');
+
 
 
 
