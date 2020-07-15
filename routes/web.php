@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+Route::get('/', 'Web\PageController@index')->name('index');
 
 Auth::routes();
 
