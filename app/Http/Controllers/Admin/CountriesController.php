@@ -26,10 +26,6 @@ class CountriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -39,7 +35,8 @@ class CountriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $country = Country::create($request->all());
+        return back();
     }
 
     /**

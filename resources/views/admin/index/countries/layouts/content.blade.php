@@ -178,4 +178,4 @@
     </div>
   </div>
 
-@include('admin.index.categories.layouts.create')
+@include('admin.index.countries.layouts.create')
