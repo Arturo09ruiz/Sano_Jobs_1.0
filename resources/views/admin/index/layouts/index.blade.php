@@ -38,7 +38,7 @@
     <script src="{{ asset('admin/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/jquery-scroll-lock/jquery-scrollLock.min.js') }}"></script>
     <!-- Optional JS -->
-    <script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{ asset('admin/vendor/chart.js/dist/Chart.min.js') }}"></script>
     <script src="assets/vendor/chart.js/dist/Chart.extension.js"></script>
     <!-- Argon JS -->
     <script src="assets/js/argon.js?v=1.2.0"></script>
