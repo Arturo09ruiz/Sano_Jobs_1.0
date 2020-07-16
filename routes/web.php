@@ -30,6 +30,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('councils', 'Admin\CouncilsController');
     Route::resource('cities', 'Admin\CitiesController');
     Route::resource('roles', 'Admin\RolesController');
+    Route::resource('teams', 'Admin\TeamsController');
+
 
 
 
