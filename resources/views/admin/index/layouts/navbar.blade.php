@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reportes_gerente.html">
+                <a class="nav-link" href="{{route('roles.index')}}">
                   <i class="fa fa-users"></i>
                   <span class="nav-link-text">Equipos</span>
                 </a>
