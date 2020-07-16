@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Role;
+
 class RolesController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class RolesController extends Controller
      */
     public function index()
     {
-        //
+        $roles = Role::orderby('id', 'DESC')->paginate(10);
+        return view('admin.index.roles.index', compact('roles'));
     }
 
     /**
