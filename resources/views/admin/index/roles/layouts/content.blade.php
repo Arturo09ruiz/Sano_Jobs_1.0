@@ -64,17 +64,17 @@
             <div class="header-body">
               <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Paises Registrados</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">Roles Registrados</h6>
 
                   <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                       <li class="breadcrumb-item"><a href="{{route('admin')}}"><i class="fas fa-home"></i></a></li>
-                      <li class="breadcrumb-item active"><a href="#">Paises</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Roles</a></li>
                     </ol>
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                  <a href="#"  data-toggle="modal" data-target="#registrar_pais" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
+                  <a href="#"  data-toggle="modal" data-target="#registrar_rol" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Paises Registrados</h3>
+                  <h3 class="mb-0">Roles Registrados</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -101,28 +101,28 @@
                       </tr>
                     </thead>
                     <tbody class="list">
-                        @foreach ($countries as $country )
+                        @foreach ($roles as $role )
 
                       <tr>
                         <th scope="row">
                           <div class="media align-items-center">
                             <div class="media-body">
-                              <span class="name mb-0 text-sm">{{$country->id}}</span>
+                              <span class="name mb-0 text-sm">{{$role->id}}</span>
                             </div>
                           </div>
                         </th>
                         <td class="budget">
-                            {{$country->name}}
+                            {{$role->name}}
                         </td>
                         <td>
                           <span class="badge badge-dot mr-4">
-                            <span class="status"> {{$country->created_at}}</span>
+                            <span class="status"> {{$role->created_at}}</span>
                           </span>
                         </td>
                         <td>
                             <span class="badge badge-dot mr-4">
                               <span class="status">
-                                  <form method="POST" action="{{route('countries.destroy', $country->id)}}">
+                                  <form method="POST" action="{{route('roles.destroy', $role->id)}}">
                                     @csrf
                                     @method('DELETE')
                                       <button class="btn btn-danger">Eliminar</button>
@@ -143,7 +143,7 @@
                 <div class="card-footer py-4">
                   <nav aria-label="...">
                     <ul class="pagination justify-content-end mb-0">
-                        {{$countries->render()}}
+                        {{$roles->render()}}
 
                     </ul>
                   </nav>
@@ -178,4 +178,4 @@
     </div>
   </div>
 
-@include('admin.index.countries.layouts.create')
+@include('admin.index.roles.layouts.create')
