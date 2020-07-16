@@ -47,6 +47,7 @@ class TeamsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $team = Team::find($id)->delete();
+        return back();
     }
 }
