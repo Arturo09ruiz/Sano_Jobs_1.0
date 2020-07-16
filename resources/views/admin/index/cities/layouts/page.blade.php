@@ -25,17 +25,6 @@
     @include('admin.index.cities.layouts.content')
 
 
-
-
-
-
-
-
-
-
-
-
-
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap_js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/js-cookie/js.cookie.js') }}"></script>
@@ -50,14 +39,44 @@
     <script src="{{ asset('admin/js/1.js') }}"></script>
     <script src="{{ asset('admin/js/2.js') }}"></script>
 
-    <script>
-        // In your Javascript (external .js resource or <script> tag)
-          $(document).ready(function() {
-          $('.js-example-basic-single').select2();
+  <script>
+    $(document).ready(function() {
+      console.log("asd");
+        $('.js-example-basic-single').select2();
+    });
+
+    $("#country").change(function(e){
+      console.log(e);
+      var country_id =
+      searchCouncils(e.target.value);
+    });
+
+    function searchCouncils(country_id){
+      $.ajax({
+        url: "councils/getcouncils",
+        type: "POST",
+        data:{ 
+          id: country_id,
+          _token:'{{ csrf_token() }}'
+        },
+        cache: false,
+        dataType: 'json',
+        success: function(dataResult){
+          var councils = dataResult.data;
+          var bodyData = '';
+          if (councils.length === 0 ) {
+            bodyData+='<option value="" disabled selected>Selecciona el Consejo</option>';
+            $("#cuncils").html(bodyData);
+          }else{
+            $.each(councils,function(index,row){
+              bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+            })
+            $("#cuncils").html(bodyData); 
+          }
+        }
       });
-      $("country").change(function(){
-    alert("The text has been changed.");
-  });
-      </script>
+    }
+
+  </script>
 </body>
 </html>

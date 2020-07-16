@@ -10,11 +10,7 @@ use App\Country;
 
 class CouncilsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         $countries = Country::all();
@@ -23,31 +19,21 @@ class CouncilsController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $council = Council::create($request->all());
         return back();
     }
-
  
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $council = Council::find($id)->delete();
         return back();
+    }
+
+    public function getCouncilsByCountryId(Request $request){
+
+        $userData = Council::where('country_id', $request->id)->get();
+        return json_encode(array('data'=>$userData));
     }
 }
