@@ -18,7 +18,7 @@
             </ul>
             <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
               <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" team="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-0" href="#" user="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
                       <img alt="Image placeholder" src="">
@@ -74,7 +74,7 @@
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                  <a href="#"  data-toggle="modal" data-target="#registrar_team" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
+                  <a href="#"  data-toggle="modal" data-target="#registrar_user" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Equipos Registrados</h3>
+                  <h3 class="mb-0">Usuarios Registrados</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -101,28 +101,28 @@
                       </tr>
                     </thead>
                     <tbody class="list">
-                        @foreach ($teams as $team )
+                        @foreach ($users as $user )
 
                       <tr>
                         <th scope="row">
                           <div class="media align-items-center">
                             <div class="media-body">
-                              <span class="name mb-0 text-sm">{{$team->id}}</span>
+                              <span class="name mb-0 text-sm">{{$user->id}}</span>
                             </div>
                           </div>
                         </th>
                         <td class="budget">
-                            {{$team->name}}
+                            {{$user->name}}
                         </td>
                         <td>
                           <span class="badge badge-dot mr-4">
-                            <span class="status"> {{$team->created_at}}</span>
+                            <span class="status"> {{$user->created_at}}</span>
                           </span>
                         </td>
                         <td>
                             <span class="badge badge-dot mr-4">
                               <span class="status">
-                                  <form method="POST" action="{{route('teams.destroy', $team->id)}}">
+                                  <form method="POST" action="{{route('users.destroy', $user->id)}}">
                                     @csrf
                                     @method('DELETE')
                                       <button class="btn btn-danger">Eliminar</button>
@@ -143,7 +143,7 @@
                 <div class="card-footer py-4">
                   <nav aria-label="...">
                     <ul class="pagination justify-content-end mb-0">
-                        {{$teams->render()}}
+                        {{$users->render()}}
 
                     </ul>
                   </nav>
@@ -178,4 +178,4 @@
     </div>
   </div>
 
-@include('admin.index.teams.layouts.create')
+@include('admin.index.users.layouts.create')
