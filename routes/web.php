@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Selects
+Route::POST('/councils/getcouncils','Admin\CouncilsController@getCouncilsByCountryId');
 
 //Admin
 Route::group(['middleware' => 'auth'], function () {
@@ -26,8 +28,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('categories', 'Admin\CategoriesController');
     Route::resource('countries', 'Admin\CountriesController');
     Route::resource('councils', 'Admin\CouncilsController');
-    Route::POST('/councils/getcouncils','Admin\CouncilsController@getCouncilsByCountryId');
-
     Route::resource('cities', 'Admin\CitiesController');
+    Route::resource('roles', 'Admin\RolesController');
+
+
+
+
 
 });
