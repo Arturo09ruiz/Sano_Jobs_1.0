@@ -8,7 +8,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="{{route('teams.store')}}" method="POST">
+        <form action="{{route('users.store')}}" method="POST">
 
         <div class="modal-body">
                 @csrf
