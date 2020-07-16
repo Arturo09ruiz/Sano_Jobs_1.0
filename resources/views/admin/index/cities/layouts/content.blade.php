@@ -116,6 +116,13 @@
                         <td class="budget">
                             {{$city->name}}
                         </td>
+                        <td class="budget">
+                            {{$city->council->name}}
+                        </td>
+                        <td class="budget">
+                            {{$city->country->name}}
+                        </td>
+
 
                         <td>
                           <span class="badge badge-dot mr-4">

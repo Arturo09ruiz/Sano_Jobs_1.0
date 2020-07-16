@@ -9,4 +9,13 @@ class City extends Model
     protected $fillable =[
         'name','country_id','council_id'
     ];
+
+    public function country()
+    {
+        return $this->belongsTo('App\Country', 'country_id', 'id');
+    }
+    public function council()
+    {
+        return $this->belongsTo('App\Council', 'council_id', 'id');
+    }
 }
