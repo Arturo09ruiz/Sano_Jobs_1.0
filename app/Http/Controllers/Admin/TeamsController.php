@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Team;
 
 class TeamsController extends Controller
 {
@@ -14,7 +15,8 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Team::orderby('id', 'DESC')->paginate(10);
+        return view('admin.index.team.index', compact('teams'));
     }
 
     /**
