@@ -24,9 +24,9 @@ class CreateVacantsTable extends Migration
             $table->date('deadline');
             $table->enum('status', ['PUBLISHED', 'DEAD'])->default('PUBLISHED');
             $table->unsignedBigInteger('user_id')->unsigned();
-            $table->unsignedBigInteger('city_id')->unsigned();
-            $table->unsignedBigInteger('conuncil_id')->unsigned();
             $table->unsignedBigInteger('country_id')->unsigned();
+            $table->unsignedBigInteger('conuncil_id')->unsigned();
+            $table->unsignedBigInteger('city_id')->unsigned();
             $table->unsignedBigInteger('team_id')->unsigned();
             $table->unsignedBigInteger('category_id')->unsigned();
             $table->timestamps();

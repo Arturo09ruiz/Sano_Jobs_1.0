@@ -21,9 +21,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->unsignedBigInteger('city_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('conuncil_id')->unsigned()->nullable();
             $table->unsignedBigInteger('country_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('conuncil_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('city_id')->unsigned()->nullable();
             $table->unsignedBigInteger('role_id')->unsigned()->nullable();
             $table->unsignedBigInteger('team_id')->unsigned()->nullable();
             $table->timestamps();
