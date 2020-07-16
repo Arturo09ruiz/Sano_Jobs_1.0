@@ -17,14 +17,14 @@ class CreateCitiesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 128);
             $table->unsignedBigInteger('country_id')->unsigned();
-            $table->unsignedBigInteger('conuncil_id')->unsigned();
+            $table->unsignedBigInteger('council_id')->unsigned();
             $table->timestamps();
 
 
 
             //Relacion
-            $table->foreign('conuncil_id')->references('id')->on('councils');
             $table->foreign('country_id')->references('id')->on('countries');
+            $table->foreign('council_id')->references('id')->on('councils');
 
         });
     }

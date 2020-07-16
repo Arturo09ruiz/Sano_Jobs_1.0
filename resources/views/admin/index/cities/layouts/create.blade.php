@@ -10,7 +10,7 @@
         </button>
       </div>
       <form action="{{route('cities.store')}}" method="POST">
-
+      @csrf
       <div class="modal-body">
               @csrf
               <div class="form-group">

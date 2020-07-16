@@ -32,20 +32,17 @@ class CitiesController extends Controller
      */
     public function store(Request $request)
     {
-        $city = City::create($request->all());
+        // dd($request->country_id);
+        // $city = City::create($request->all());
+        $city = new City;
+        $city->name  =  $request->name;
+        $city->country_id =  $request->country_id;
+        $city->council_id  =  $request->council_id;
+
+        $city->save();
         return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
