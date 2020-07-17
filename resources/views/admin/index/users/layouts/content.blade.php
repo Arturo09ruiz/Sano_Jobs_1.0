@@ -139,15 +139,6 @@
                     </tbody>
                   </table>
                 </div>
-                <!-- Card footer -->
-                <div class="card-footer py-4">
-                  <nav aria-label="...">
-                    <ul class="pagination justify-content-end mb-0">
-                        {{$users->render()}}
-
-                    </ul>
-                  </nav>
-                </div>
               </div>
             </div>
           </div>
