@@ -124,7 +124,7 @@
                             {{$user->email}}
                         </td>
                         <td class="budget">
-                            {{$user->role_id}}
+                            {{$user->role->name}}
                         </td>
                         <td>
                           <span class="badge badge-dot mr-4">
