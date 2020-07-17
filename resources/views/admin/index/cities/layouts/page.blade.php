@@ -55,7 +55,7 @@
       $.ajax({
         url: "councils/getcouncils",
         type: "POST",
-        data:{ 
+        data:{
           id: country_id,
           _token:'{{ csrf_token() }}'
         },
@@ -71,12 +71,19 @@
             $.each(councils,function(index,row){
               bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
             })
-            $("#cuncils").html(bodyData); 
+            $("#cuncils").html(bodyData);
           }
         }
       });
     }
 
+  </script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+      $(document).ready(function() {
+    $('#cities').DataTable();
+} );
   </script>
 </body>
 </html>

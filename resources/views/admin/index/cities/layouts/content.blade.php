@@ -87,17 +87,17 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Ciudades Registradas</h3>
+                  <h3 class="mb-0">Ciudades Registrados</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+                  <table id="cities" class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
-                        <th scope="col" class="sort" data-sort="budget">Consejo</th>
-                        <th scope="col" class="sort" data-sort="budget">Pais</th>
+                        {{-- <th scope="col" class="sort" data-sort="budget">Consejo</th>
+                         <th scope="col" class="sort" data-sort="budget">Pais</th> --}}
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
                         <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
@@ -116,13 +116,6 @@
                         <td class="budget">
                             {{$city->name}}
                         </td>
-                        <td class="budget">
-                            {{$city->council->name}}
-                        </td>
-                        <td class="budget">
-                            {{$city->country->name}}
-                        </td>
-
 
                         <td>
                           <span class="badge badge-dot mr-4">
@@ -150,14 +143,7 @@
                   </table>
                 </div>
                 <!-- Card footer -->
-                <div class="card-footer py-4">
-                  <nav aria-label="...">
-                    <ul class="pagination justify-content-end mb-0">
-                        {{$cities->render()}}
 
-                    </ul>
-                  </nav>
-                </div>
               </div>
             </div>
           </div>
