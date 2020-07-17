@@ -100,7 +100,7 @@
                         <th scope="col" class="sort" data-sort="budget">Email</th>
                         <th scope="col" class="sort" data-sort="budget">Rol</th>
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
-                        <th scope="col" class="sort" data-sort="status">Acciones</th>
+                        <th scope="col" class="sort text-center" data-sort="status">Acciones</th>
                       </tr>
                     </thead>
                     <tbody class="list">
@@ -132,15 +132,22 @@
                           </span>
                         </td>
                         <td>
+
                             <span class="badge badge-dot mr-4">
-                              <span class="status">
-                                  <form method="POST" action="{{route('users.destroy', $user->id)}}">
-                                    @csrf
-                                    @method('DELETE')
-                                      <button class="btn btn-danger">Eliminar</button>
-                                  </form>
+                                <span class="status">
+                                    <button class="btn btn-info">Cambiar Contraseña</button>
+                                </span>
                               </span>
+                              <span class="badge badge-dot mr-4">
+                                <span class="status">
+                                    <form method="POST" action="{{route('users.destroy', $user->id)}}">
+                                      @csrf
+                                      @method('DELETE')
+                                        <button class="btn btn-danger">Eliminar</button>
+                                    </form>
+                                </span>
                             </span>
+
                           </td>
                       </tr>
                       @endforeach
