@@ -20,7 +20,7 @@ class CountriesController extends Controller
      */
     public function index()
     {
-        $countries = Country::orderby('id', 'DESC')->paginate(10);
+        $countries = Country::all();;
         return view('admin.index.countries.index', compact('countries'));
     }
 
@@ -42,7 +42,7 @@ class CountriesController extends Controller
         return back();
     }
 
- 
+
     /**
      * Remove the specified resource from storage.
      *
