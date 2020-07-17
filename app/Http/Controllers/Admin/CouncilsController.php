@@ -14,7 +14,7 @@ class CouncilsController extends Controller
     public function index()
     {
         $countries = Country::all();
-        $councils = Council::all();;
+        $councils = Council::all();
         return view('admin.index.councils.index', compact('countries','councils'));
     }
 

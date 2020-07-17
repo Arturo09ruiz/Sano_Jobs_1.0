@@ -20,7 +20,7 @@ class CountriesController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();;
+        $countries = Country::all();
         return view('admin.index.countries.index', compact('countries'));
     }
 
