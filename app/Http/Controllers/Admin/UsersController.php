@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 use App\User;
 
 class UsersController extends Controller
@@ -68,7 +70,12 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        $user->password  = Hash::make($request->password);
+        $user->save();
+
+        return back();
     }
 
     /**
