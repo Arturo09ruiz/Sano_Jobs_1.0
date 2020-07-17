@@ -15,7 +15,7 @@
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fa fa-user-tag"></i></span>
+                      <span class="input-group-text"><i class="fa fa-key"></i></span>
                     </div>
                     <input class="form-control" placeholder="Ingresar Nueva Contraseña" name="password" required >
                   </div>
