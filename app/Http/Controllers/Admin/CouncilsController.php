@@ -10,11 +10,11 @@ use App\Country;
 
 class CouncilsController extends Controller
 {
-    
+
     public function index()
     {
         $countries = Country::all();
-        $councils = Council::orderby('id', 'DESC')->paginate(10);
+        $councils = Council::all();;
         return view('admin.index.councils.index', compact('countries','councils'));
     }
 
@@ -24,7 +24,7 @@ class CouncilsController extends Controller
         $council = Council::create($request->all());
         return back();
     }
- 
+
     public function destroy($id)
     {
         $council = Council::find($id)->delete();
