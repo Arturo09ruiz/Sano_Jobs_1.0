@@ -12,8 +12,8 @@
 */
 
 
-
-Route::get('/', 'Web\PageController@index')->name('index');
+Route::redirect('/', 'inicio', 301);
+Route::get('/inicio', 'Web\PageController@index')->name('index');
 
 Auth::routes();
 
