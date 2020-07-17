@@ -10,6 +10,8 @@
   <title>
     Vacantes de Trabajo
   </title>
+  @laravelPWA
+
   <!--     Fonts and icons     -->
   <link href="{{ asset('css/fonts/1.css') }}" rel="stylesheet">
   <!-- Font Awesome Icons -->
