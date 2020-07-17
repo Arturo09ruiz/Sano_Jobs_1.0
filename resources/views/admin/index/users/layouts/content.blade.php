@@ -135,7 +135,7 @@
 
                             <span class="badge badge-dot mr-4">
                                 <span class="status">
-                                    <button class="btn btn-info">Cambiar Contraseña</button>
+                                    <a href="#"  data-toggle="modal" data-target="#reset_password" class="btn btn-info">Cambiar Contraseña</a>
                                 </span>
                               </span>
                               <span class="badge badge-dot mr-4">
@@ -189,3 +189,5 @@
   </div>
 
 @include('admin.index.users.layouts.create')
+@include('admin.index.users.layouts.reset')
+
