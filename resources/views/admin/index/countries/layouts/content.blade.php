@@ -91,8 +91,8 @@
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
+                  <table id="countries" class="table align-items-center table-flush">
+                    <thead  class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
@@ -139,15 +139,7 @@
                     </tbody>
                   </table>
                 </div>
-                <!-- Card footer -->
-                <div class="card-footer py-4">
-                  <nav aria-label="...">
-                    <ul class="pagination justify-content-end mb-0">
-                        {{$countries->render()}}
 
-                    </ul>
-                  </nav>
-                </div>
               </div>
             </div>
           </div>
