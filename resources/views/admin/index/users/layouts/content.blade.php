@@ -91,11 +91,14 @@
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+                  <table id="users" class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
+                        <th scope="col" class="sort" data-sort="budget">NCM</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
+                        <th scope="col" class="sort" data-sort="budget">Email</th>
+                        <th scope="col" class="sort" data-sort="budget">Rol</th>
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
                         <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
@@ -112,7 +115,16 @@
                           </div>
                         </th>
                         <td class="budget">
+                            {{$user->ncm}}
+                        </td>
+                        <td class="budget">
                             {{$user->name}}
+                        </td>
+                        <td class="budget">
+                            {{$user->email}}
+                        </td>
+                        <td class="budget">
+                            {{$user->role_id}}
                         </td>
                         <td>
                           <span class="badge badge-dot mr-4">
