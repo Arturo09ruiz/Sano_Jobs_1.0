@@ -96,8 +96,8 @@
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
-                        {{-- <th scope="col" class="sort" data-sort="budget">Consejo</th>
-                         <th scope="col" class="sort" data-sort="budget">Pais</th> --}}
+                         <th scope="col" class="sort" data-sort="budget">Consejo</th>
+                         <th scope="col" class="sort" data-sort="budget">Pais</th>
                         <th scope="col" class="sort" data-sort="status">Fecha</th>
                         <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
@@ -116,7 +116,12 @@
                         <td class="budget">
                             {{$city->name}}
                         </td>
-
+                        <td class="budget">
+                            {{$city->council->name}}
+                        </td>
+                        <td class="budget">
+                            {{$city->country->name}}
+                        </td>
                         <td>
                           <span class="badge badge-dot mr-4">
                             <span class="status"> {{$city->created_at}}</span>
