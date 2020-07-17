@@ -91,7 +91,7 @@
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+                  <table id="teams" class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
@@ -140,14 +140,7 @@
                   </table>
                 </div>
                 <!-- Card footer -->
-                <div class="card-footer py-4">
-                  <nav aria-label="...">
-                    <ul class="pagination justify-content-end mb-0">
-                        {{$teams->render()}}
 
-                    </ul>
-                  </nav>
-                </div>
               </div>
             </div>
           </div>
