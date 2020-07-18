@@ -9,6 +9,8 @@
   <!-- Favicon -->
   <!-- <link rel="icon" href="assets/img/brand/favicon.png" type="image/png"> -->
   <!-- Fonts -->
+  @laravelPWA
+
   <link rel="stylesheet" href="{{ asset('admin/fonts/1.css') }}">
   <!-- Icons -->
   <link rel="stylesheet" href="{{ asset('admin/vendor/nucleo/nucleo.css') }}" type="text/css">
