@@ -15,7 +15,7 @@
                   <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        <span class="input-group-text"><i class="fa fa-user-o"></i></span>
                       </div>
                       <input  id="email" name="email" class="form-control @error('email') is-invalid @enderror"  required placeholder="Ingresa Tu Email" type="email">
                     </div>
@@ -24,7 +24,7 @@
                   <div class="form-group focused">
                     <div class="input-group input-group-alternative">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        <span class="input-group-text"><i class="fa fa-key"></i></span>
                       </div>
                       <input id="password"  class="form-control  @error('password') is-invalid @enderror" required placeholder="Ingresa tu Contraseña" name="password" autocomplete="current-password" type="password">
                     </div>
@@ -53,7 +53,7 @@
                   @error('email')
                   <br>
                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                      <strong>Estas Credenciales No Concuerdan con nuestros registros!</strong>
+                      <strong>Usuario Incorrecto!</strong>
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
