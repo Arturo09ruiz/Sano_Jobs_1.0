@@ -11,17 +11,18 @@
 |
 */
 
+//Routes_Auth
+Auth::routes();
+
+
+
 
 Route::redirect('/', 'inicio', 301);
 Route::get('/inicio', 'Web\PageController@index')->name('index');
 
-Auth::routes();
-
 Route::get('/offline', function () {
     return view('laravelpwa::offline');
 });
-
-
 
 
 Route::get('/home', 'HomeController@index')->name('home');

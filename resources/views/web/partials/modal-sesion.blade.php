@@ -18,12 +18,8 @@
                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                       </div>
                       <input  id="email" name="email" class="form-control @error('email') is-invalid @enderror"  required placeholder="Ingresa Tu Email" type="email">
-                          @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                          @enderror
                     </div>
+
                   </div>
                   <div class="form-group focused">
                     <div class="input-group input-group-alternative">
@@ -32,6 +28,15 @@
                       </div>
                       <input id="password"  class="form-control  @error('password') is-invalid @enderror" required placeholder="Ingresa tu Contraseña" name="password" autocomplete="current-password" type="password">
                     </div>
+                    @error('password')
+                    <br>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Estas Credenciales No Concuerdan con nuestros registros!</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    @enderror
                   </div>
                   <div class="custom-control custom-control-alternative custom-checkbox">
                     <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
@@ -44,10 +49,20 @@
                     <div class="col-6 text-right">
                       <a href="#" class="text-light"><small>Olvidaste tu Contraseña?</small></a>
                     </div>
-                  </div>        </div>
+                  </div>
+                  @error('email')
+                  <br>
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <strong>Estas Credenciales No Concuerdan con nuestros registros!</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  @enderror
+                    </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button  type="submit" class="btn test-buuton btn-primary">{{ __('Login') }}</button>
+          <button  type="submit" class="btn test-buuton btn-primary">Iniciar Sesión</button>
         </div>
       </div>
     </div>
