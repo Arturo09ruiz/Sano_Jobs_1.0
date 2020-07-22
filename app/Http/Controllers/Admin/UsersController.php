@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 use App\User;
+use App\Country;
+
 
 class UsersController extends Controller
 {
@@ -15,7 +17,8 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('admin.index.users.index', compact('users'));
+        $countries = Country::all();
+        return view('admin.index.users.index', compact('users', 'countries'));
     }
 
     /**
