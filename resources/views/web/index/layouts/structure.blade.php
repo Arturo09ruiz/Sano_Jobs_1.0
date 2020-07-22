@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 
   <title>
-    Vacantes de Trabajo
+    CREA - Área Sudamerica Noroeste
   </title>
   @laravelPWA
 
