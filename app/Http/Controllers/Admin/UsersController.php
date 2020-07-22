@@ -45,7 +45,20 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User;
+
+        $user->name  =  $request->name;
+        $user->email  =  $request->email;
+        $user->password  = Hash::make($request->password);
+        $user->country_id =  $request->country_id;
+        $user->conuncil_id   =  $request->council_id;
+        $user->city_id  =  $request->city_id;
+        $user->role_id  =  $request->role_id;
+        $user->team_id  =  $request->team_id;
+
+        $user->save();
+
+        return back();
     }
 
     /**
