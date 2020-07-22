@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use App\Country;
+use App\Team;
+use App\Role;
+
+
 
 
 class UsersController extends Controller
@@ -17,8 +21,10 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
+        $teams = Team::all();
+        $roles = Role::all();
         $countries = Country::all();
-        return view('admin.index.users.index', compact('users', 'countries'));
+        return view('admin.index.users.index', compact('users', 'countries', 'teams', 'roles'));
     }
 
     /**

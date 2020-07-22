@@ -54,7 +54,7 @@
                   <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <select id="cuncils" class="js-example-basic-single form-control" required name="council_id">
-                        <option value="" disabled selected>Selecciona el Consejo</option>
+                        <option value="" >Selecciona el Consejo</option>
                       </select>
                     </div>
                   </div>
@@ -62,9 +62,43 @@
 
                   <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
-                      <select id="cities" class="js-example-basic-single form-control" required name="council_id">
+                      <select id="cities" class="js-example-basic-single form-control" required name="city_id">
                         <option value="" disabled selected>Selecciona la Ciudad</option>
                       </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+                      <select  class="js-example-basic-single form-control" required name="team_id">
+                        <option value="0" disabled selected>Selecciona el Equipo</option>
+                        <option value="0">Sin Equipo De Trabajo</option>
+
+
+                        @foreach ($teams as $team)
+                          <option value="{{$team->id}}" >{{$team->name}}</option>
+                        @endforeach
+
+                    </select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+                      <select  class="js-example-basic-single form-control" required name="role_id">
+                        <option value="0" disabled selected>Selecciona el Rol Del Usuario</option>
+
+
+                        @foreach ($roles as $role)
+                          <option value="{{$role->id}}" >{{$role->name}}</option>
+                        @endforeach
+
+                    </select>
+
                     </div>
                   </div>
         </div>
