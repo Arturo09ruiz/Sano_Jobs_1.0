@@ -79,5 +79,30 @@
       });
     </script>
 
+
+<script>
+    $(".btn_requirements").click(function(){
+
+              $(".requirements").append(
+
+                    '<input class="form-control requerimient" id="requerimient" required type="text">'+
+                    '<br>'
+
+                );
+
+
+
+
+    });
+
+
+    $(".btn_save").click(function(){
+
+    var reque = $(".requerimient").val();
+    alert(reque);
+
+    });
+
+</script>
 </body>
 </html>
