@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa "></i></span>
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                       </div>
                       <input class="form-control" placeholder="Ingresar Email" name="email" required type="email">
                     </div>
