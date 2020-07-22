@@ -32,6 +32,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Selects
 Route::POST('/councils/getcouncils','Admin\CouncilsController@getCouncilsByCountryId');
+Route::POST('/cities/getcities','Admin\CitiesController@getCitiesByCouncilId');
+
 
 //Admin
 Route::group(['middleware' => 'auth'], function () {

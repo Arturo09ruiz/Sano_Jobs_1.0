@@ -55,4 +55,10 @@ class CitiesController extends Controller
         $cities = City::find($id)->delete();
         return back();
     }
+
+    public function getCitiesByCouncilId(Request $request){
+
+        $userData = City::where('council_id', $request->id)->get();
+        return json_encode(array('data'=>$userData));
+    }
 }

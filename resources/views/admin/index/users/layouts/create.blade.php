@@ -50,6 +50,23 @@
 
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <select id="cuncils" class="js-example-basic-single form-control" required name="council_id">
+                        <option value="" disabled selected>Selecciona el Consejo</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <select id="cities" class="js-example-basic-single form-control" required name="council_id">
+                        <option value="" disabled selected>Selecciona la Ciudad</option>
+                      </select>
+                    </div>
+                  </div>
         </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
