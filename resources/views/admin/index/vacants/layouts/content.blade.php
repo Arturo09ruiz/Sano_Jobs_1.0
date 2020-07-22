@@ -64,17 +64,17 @@
             <div class="header-body">
               <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Equipos Registrados</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">Vacantes Registradas</h6>
 
                   <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                       <li class="breadcrumb-item"><a href="{{route('admin')}}"><i class="fas fa-home"></i></a></li>
-                      <li class="breadcrumb-item active"><a href="#">Equipos</a></li>
+                      <li class="breadcrumb-item active"><a href="#">Vacantes</a></li>
                     </ol>
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                  <a href="#"  data-toggle="modal" data-target="#registrar_team" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
+                  <a href="#"  data-toggle="modal" data-target="#registrar_vacant" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
               <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                  <h3 class="mb-0">Equipos Registrados</h3>
+                  <h3 class="mb-0">Vacantes Registradas</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -162,7 +162,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link" target="_blank">Términos y Condiciones de la Aplicacion</a>
+                <a href="#" class="nav-link" target="_blank">Términos y Condiciones de la Aplicación</a>
               </li>
             </ul>
           </div>
