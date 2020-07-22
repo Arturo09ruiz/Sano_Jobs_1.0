@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Vacant;
+
 class VacantsController extends Controller
 {
     /**
@@ -14,7 +16,9 @@ class VacantsController extends Controller
      */
     public function index()
     {
-        
+        $vacants = Vacant::where('status', 'PUBLISHED')->orderBy('id', 'desc')->get();
+        return view('admin.index.vacants.index', compact('vacants'));
+
     }
 
     /**
