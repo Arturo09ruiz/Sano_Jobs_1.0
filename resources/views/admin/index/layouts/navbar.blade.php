@@ -61,7 +61,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reportes_gerente.html">
+                <a class="nav-link" href="">
                   <i class="fab fa-wpforms"></i>
                   <span class="nav-link-text">Vacantes</span>
                 </a>

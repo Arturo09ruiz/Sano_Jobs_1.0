@@ -27,7 +27,6 @@ Route::get('/offline', function () {
 });
 
 
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Selects
@@ -45,6 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('roles', 'Admin\RolesController');
     Route::resource('teams', 'Admin\TeamsController');
     Route::resource('users', 'Admin\UsersController');
+    Route::resource('vacants', 'Admin\VacantsController');
+
 
 
 
