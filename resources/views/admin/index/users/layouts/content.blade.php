@@ -95,7 +95,6 @@
                     <thead class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
-                        <th scope="col" class="sort" data-sort="budget">NCM</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
                         <th scope="col" class="sort" data-sort="budget">Email</th>
                         <th scope="col" class="sort" data-sort="budget">Rol</th>
@@ -114,9 +113,6 @@
                             </div>
                           </div>
                         </th>
-                        <td class="budget">
-                            {{$user->ncm}}
-                        </td>
                         <td class="budget">
                             {{$user->name}}
                         </td>
