@@ -13,6 +13,34 @@
         <div class="modal-body">
             <div class="col-md-6">
                 @csrf
+
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Ingresar Nombre de la Empresa" name="business" required type="text">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Ingresar Email de la Empresa" name="email" required type="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                      </div>
+                      <input class="form-control telefono" id="telefono" placeholder="Ingresar Numero de Telefono de la Empresa" name="telefono" required type="text">
+                    </div>
+                </div>
+
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
@@ -34,6 +62,7 @@
 
 
 
+
                 <div>
                     <div class="requirements" id="requirements">
 
@@ -44,9 +73,12 @@
                         </div>
                         <div class="col-md-8">
                             <button class="btn btn-primary btn_requirements" id="btn-requirements" type="button">Agregar Requerimiento</button>
+
                         </div>
                     </div>
                 </div>
+                <br>
+
 
             </div>
         </div>
