@@ -9,6 +9,7 @@ use App\Vacant;
 use App\Category;
 use App\Team;
 use App\Country;
+use Auth;
 
 
 
@@ -47,7 +48,27 @@ class VacantsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $vacant = new Vacant;
+
+        $vacant->name  =  $request->name;
+        $vacant->description  =  $request->description;
+        $vacant->requirements  =  $request->requirements;
+        $vacant->business  =  $request->business;
+        $vacant->email  =  $request->email;
+        $vacant->telefono  =  $request->telefono;
+        $vacant->deadline  =  $request->deadline;
+        $vacant->user_id  =  Auth::user()->id;
+        $vacant->country_id =  $request->country_id;
+        $vacant->conuncil_id   =  $request->council_id;
+        $vacant->city_id  =  $request->city_id;
+        $vacant->team_id  =  $request->team_id;
+        $vacant->category_id   =  $request->category_id;
+
+
+        $vacant->save();
+
+        return back();
     }
 
     /**
