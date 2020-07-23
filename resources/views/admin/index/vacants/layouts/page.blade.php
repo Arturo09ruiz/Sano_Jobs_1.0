@@ -85,7 +85,7 @@
 
               $(".requirements").append(
 
-                    '<input class="form-control requerimient" id="requerimient" required type="text">'+
+                    '<input placeholder="Ingresar Requerimiento" class="form-control requerimient" id="requerimient" required type="text">'+
                     '<br>'
 
                 );
@@ -98,8 +98,21 @@
 
     $(".btn_save").click(function(){
 
-    var reque = $(".requerimient").val();
-    alert(reque);
+        var listaRequerimientos = [];
+        var nombre = $(".requerimient");
+
+        for(var i = 0; i < nombre.length; i++){
+
+        listaRequerimientos.push({
+                      "nombre" : $(nombre[i]).val(),
+                    })
+
+        }
+        $("#listrequirements").val(JSON.stringify(listaRequerimientos));
+
+        document.forms["store_vacant"].submit();
+
+
 
     });
 

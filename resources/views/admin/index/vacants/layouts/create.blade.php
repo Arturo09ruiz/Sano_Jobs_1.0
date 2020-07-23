@@ -8,7 +8,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="{{route('vacants.store')}}" method="POST">
+        <form id="store_vacant" action="{{route('vacants.store')}}" method="POST">
 
         <div class="modal-body">
             <div class="col-md-6">
@@ -30,6 +30,7 @@
                         <textarea class="form-control" name="description" required placeholder="Ingresar Descripción de la Vacante"  cols="3" rows="3"></textarea>
                     </div>
                 </div>
+                <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
 
 
 
@@ -49,6 +50,7 @@
 
             </div>
         </div>
+
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button  type="button" id="btn_save" class="btn test-buuton btn_save btn-primary">Registrar Equipo</button>
@@ -58,3 +60,4 @@
       </div>
     </div>
   </div>
+
