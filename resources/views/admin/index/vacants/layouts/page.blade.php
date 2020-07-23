@@ -127,6 +127,74 @@
 
     });
 
+
+
+    $("#country").change(function(e){
+          console.log(e);
+          var country_id =
+          searchCouncils(e.target.value);
+        });
+
+        function searchCouncils(country_id){
+          $.ajax({
+            url: "councils/getcouncils",
+            type: "POST",
+            data:{
+              id: country_id,
+              _token:'{{ csrf_token() }}'
+            },
+            cache: false,
+            dataType: 'json',
+            success: function(dataResult){
+              var councils = dataResult.data;
+              var bodyData = '';
+              if (councils.length === 0 ) {
+                bodyData+='<option value="" disabled selected>Selecciona el Consejo</option>';
+                $("#cuncils").html(bodyData);
+              }else{
+                $.each(councils,function(index,row){
+                  bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                })
+                $("#cuncils").html(bodyData);
+              }
+            }
+          });
+        }
+
+
+
+        $("#cuncils").change(function(e){
+          console.log(e);
+          var council_id =
+          searchCities(e.target.value);
+        });
+
+        function searchCities(council_id){
+          $.ajax({
+            url: "cities/getcities",
+            type: "POST",
+            data:{
+              id: council_id,
+              _token:'{{ csrf_token() }}'
+            },
+            cache: false,
+            dataType: 'json',
+            success: function(dataResult){
+              var cities = dataResult.data;
+              var bodyData = '';
+              if (cities.length === 0 ) {
+                bodyData+='<option value="" disabled selected>Selecciona La Ciudad</option>';
+                $("#cities").html(bodyData);
+              }else{
+                $.each(cities,function(index,row){
+                  bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                })
+                $("#cities").html(bodyData);
+              }
+            }
+          });
+        }
+
 </script>
 </body>
 </html>
