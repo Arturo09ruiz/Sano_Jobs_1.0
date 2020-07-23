@@ -10,6 +10,7 @@ use App\Category;
 use App\Team;
 use App\Country;
 use Auth;
+use App\Http\Requests\VacantStoreRequest;
 
 
 class VacantsController extends Controller
@@ -45,7 +46,7 @@ class VacantsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VacantStoreRequest $request)
     {
 
         $vacant = new Vacant;

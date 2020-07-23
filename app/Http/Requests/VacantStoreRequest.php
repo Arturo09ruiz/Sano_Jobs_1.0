@@ -13,7 +13,7 @@ class VacantStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,20 @@ class VacantStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'description' => 'required',
+            'requirements' => 'required',
+            'business' => 'required',
+            'email' => 'required',
+            'telefono' => 'required',
+            'deadline' => 'required',
+            'user_id' => 'required',
+            'country_id' => 'required',
+            'conuncil_id' => 'required',
+            'city_id' => 'required',
+            'team_id' => 'required',
+            'category_id' => 'required',
+
         ];
     }
 }
