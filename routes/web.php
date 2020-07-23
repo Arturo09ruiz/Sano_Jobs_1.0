@@ -45,6 +45,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('teams', 'Admin\TeamsController');
     Route::resource('users', 'Admin\UsersController');
     Route::resource('vacants', 'Admin\VacantsController');
+    Route::post('vacants-status/{id}', 'Admin\VacantsController@status')->name('status_vacant');
+
 
 
 

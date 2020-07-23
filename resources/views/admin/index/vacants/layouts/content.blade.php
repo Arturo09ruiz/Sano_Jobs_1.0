@@ -150,7 +150,11 @@
                         <td>
                             <span class="badge badge-dot mr-4">
                                 <span class="status">
-                                    <button class="btn btn-info">Status</button>
+                                    <form method="POST" action="{{route('status_vacant', $vacant->id)}}">
+                                    @csrf
+
+                                    <button class="btn btn-info">Cambiar Status</button>
+                                    </form>
                                 </span>
                               </span>
                             <span class="badge badge-dot mr-4">

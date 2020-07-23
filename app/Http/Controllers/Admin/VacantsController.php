@@ -100,11 +100,15 @@ class VacantsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
+    public function status($id)
+    {
+        $date = ('DEAD');
+        $vacant = Vacant::find($id);
+        $vacant->status = $date;
+        $vacant->save();
+        return back()->with('info', 'Status Cambiado Correctamente');;
+    }
     /**
      * Remove the specified resource from storage.
      *
