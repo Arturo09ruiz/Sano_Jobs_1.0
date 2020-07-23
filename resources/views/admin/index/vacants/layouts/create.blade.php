@@ -60,14 +60,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="input-group input-group-alternative mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-spell-check"></i></span>
-                      </div>
-                      <input class="form-control" placeholder="Ingresar Fecha Límite" name="deadline" required type="date">
-                    </div>
-                </div>
+
 
                 <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
 
@@ -156,14 +149,21 @@
                     </div>
                   </div>
 
-
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-spell-check"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Ingresar Fecha Límite" name="deadline" required type="date">
+                    </div>
+                </div>
             </div>
         </div>
         </div>
 
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button  type="button" id="btn_save" class="btn test-buuton btn_save btn-primary">Registrar Equipo</button>
+            <button  type="button" id="btn_save" class="btn test-buuton btn_save btn-primary">Registrar Vacante</button>
         </form>
 
         </div>
