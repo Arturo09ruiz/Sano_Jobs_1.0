@@ -141,7 +141,7 @@
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Nombre</th>
-                        <th scope="col" class="sort" data-sort="status">Fecha</th>
+                        <th scope="col" class="sort" data-sort="status">Fecha Límite</th>
                         <th scope="col" class="sort" data-sort="status">Acciones</th>
                       </tr>
                     </thead>
@@ -161,7 +161,7 @@
                         </td>
                         <td>
                           <span class="badge badge-dot mr-4">
-                            <span class="status"> {{$vacant->created_at}}</span>
+                            <span class="status"> {{$vacant->deadline}}</span>
                           </span>
                         </td>
                         <td>
