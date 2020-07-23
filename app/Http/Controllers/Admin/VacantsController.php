@@ -68,7 +68,7 @@ class VacantsController extends Controller
 
         $vacant->save();
 
-        return back();
+        return back()->with('info', 'Guardado Correctamente');;
     }
 
     /**
