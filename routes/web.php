@@ -46,6 +46,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'Admin\UsersController');
     Route::resource('vacants', 'Admin\VacantsController');
     Route::post('vacants-status/{id}', 'Admin\VacantsController@status')->name('status_vacant');
+    Route::post('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
+    Route::get('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
+
+
 
 
 

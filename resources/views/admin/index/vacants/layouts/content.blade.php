@@ -119,9 +119,10 @@
                   <div class="row">
                     <div class="col-md-8"></div>
                     <div class="col-md-4">
-                       <form class="form-inline" method="POST" action="">
+                       <form class="form-inline" method="POST" action="{{route('dead_vacant')}}">
+                        @csrf
                         <div class="form-group mb-2">
-                            <input class="form-control" id="text" placeholder="2020-12-12">
+                            <input class="form-control" name="date" id="text" placeholder="2020-12-12">
                         </div>
                         <div class="form-group mx-sm-3 mb-2">
                            <button class="btn btn-primary">Buscar</button>

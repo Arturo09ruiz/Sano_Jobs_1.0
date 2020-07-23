@@ -68,7 +68,7 @@ class VacantsController extends Controller
 
         $vacant->save();
 
-        return back()->with('info', 'Guardado Correctamente');
+        return redirect()->route('vacants.index')->with('info', 'Guardado Correctamente');
     }
 
     /**
@@ -107,7 +107,18 @@ class VacantsController extends Controller
         $vacant = Vacant::find($id);
         $vacant->status = $date;
         $vacant->save();
-        return back()->with('info', 'Status Cambiado Correctamente');;
+        return redirect()->route('vacants.index')->with('info', 'Status Cambiado Correctamente');;
+    }
+
+    public function dead(Request $request)
+    {
+        $date = $request->date;
+        $countries = Country::all();
+        $categories = Category::all();
+        $teams = Team::all();
+        $vacants = Vacant::orderBy('id', 'desc')->where('status', 'PUBLISHED')->where('deadline', $date)->paginate(10);
+        return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams', 'countries'));
+
     }
     /**
      * Remove the specified resource from storage.
@@ -118,6 +129,6 @@ class VacantsController extends Controller
     public function destroy($id)
     {
         $vacant = Vacant::find($id)->delete();
-        return back()->with('danger', 'Eliminado Correctamente');
+        return redirect()->route('vacants.index')->with('danger', 'Eliminado Correctamente');
     }
 }
