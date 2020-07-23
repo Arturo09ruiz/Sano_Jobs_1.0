@@ -124,6 +124,39 @@
                 </div>
 
 
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+                      <select id="country" class="js-example-basic-single form-control" required name="country_id">
+                        <option value="0" disabled selected>Selecciona el Pais</option>
+
+                        @foreach ($countries as $country)
+                          <option value="{{$country->id}}" >{{$country->name}}</option>
+                        @endforeach
+
+                    </select>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <select id="cuncils" class="js-example-basic-single form-control" required name="council_id">
+                        <option value="" >Selecciona el Consejo</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <select id="cities" class="js-example-basic-single form-control" required name="city_id">
+                        <option value="" disabled selected>Selecciona la Ciudad</option>
+                      </select>
+                    </div>
+                  </div>
+
+
             </div>
         </div>
         </div>

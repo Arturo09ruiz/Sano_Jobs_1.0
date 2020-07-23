@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Vacant;
 use App\Category;
 use App\Team;
+use App\Country;
+
 
 
 class VacantsController extends Controller
@@ -19,10 +21,11 @@ class VacantsController extends Controller
      */
     public function index()
     {
+        $countries = Country::all();
         $categories = Category::all();
         $teams = Team::all();
         $vacants = Vacant::where('status', 'PUBLISHED')->orderBy('id', 'desc')->get();
-        return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams'));
+        return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams', 'countries'));
 
     }
 
