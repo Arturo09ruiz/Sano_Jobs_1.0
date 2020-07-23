@@ -12,7 +12,6 @@ use App\Country;
 use Auth;
 
 
-
 class VacantsController extends Controller
 {
     /**
