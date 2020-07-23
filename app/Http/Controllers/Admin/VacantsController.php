@@ -25,7 +25,7 @@ class VacantsController extends Controller
         $countries = Country::all();
         $categories = Category::all();
         $teams = Team::all();
-        $vacants = Vacant::where('status', 'PUBLISHED')->orderBy('id', 'desc')->get();
+        $vacants = Vacant::orderBy('id', 'desc')->where('status', 'PUBLISHED')->paginate(10);
         return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams', 'countries'));
 
     }
