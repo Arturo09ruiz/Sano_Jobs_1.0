@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="{{ asset('admin/vendor/font-awesome/all.min.css') }}" type="text/css">
   <!-- Page plugins -->
   <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="{{ asset('admin/css/1.css') }}" type="text/css">
 </head>
 
@@ -47,8 +49,12 @@
     <script src="{{ asset('admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/maskedinput/maskedinput.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
     <script>
     $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+
       $("#telefono").mask("(999) 999-9999");
 
       $('#vacants').DataTable({

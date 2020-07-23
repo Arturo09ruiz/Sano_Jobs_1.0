@@ -11,6 +11,7 @@
         <form id="store_vacant" action="{{route('vacants.store')}}" method="POST">
 
         <div class="modal-body">
+            <div class="row">
             <div class="col-md-6">
                 @csrf
 
@@ -26,7 +27,7 @@
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                       </div>
                       <input class="form-control" placeholder="Ingresar Email de la Empresa" name="email" required type="email">
                     </div>
@@ -35,7 +36,7 @@
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
                       </div>
                       <input class="form-control telefono" id="telefono" placeholder="Ingresar Numero de Telefono de la Empresa" name="telefono" required type="text">
                     </div>
@@ -58,6 +59,16 @@
                         <textarea class="form-control" name="description" required placeholder="Ingresar Descripción de la Vacante"  cols="3" rows="3"></textarea>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-spell-check"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Ingresar Fecha Límite" name="deadline" required type="date">
+                    </div>
+                </div>
+
                 <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
 
 
@@ -81,6 +92,40 @@
 
 
             </div>
+
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+                      <select class="form-control js-example-basic-single" name="category_id">
+                        <option value="" disabled selected>Selecciona la Categoria</option>
+
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}" >{{$category->name}}</option>
+                         @endforeach
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+
+                      <select class="form-control js-example-basic-single" name="team_id">
+                        <option value="" disabled selected>Selecciona El Equipo de Trabajo</option>
+
+                        @foreach ($teams as $team)
+                            <option value="{{$team->id}}" >{{$team->name}}</option>
+                         @endforeach
+
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
         </div>
 
             <div class="modal-footer">

@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Vacant;
+use App\Category;
+use App\Team;
+
 
 class VacantsController extends Controller
 {
@@ -16,8 +19,10 @@ class VacantsController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
+        $teams = Team::all();
         $vacants = Vacant::where('status', 'PUBLISHED')->orderBy('id', 'desc')->get();
-        return view('admin.index.vacants.index', compact('vacants'));
+        return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams'));
 
     }
 
