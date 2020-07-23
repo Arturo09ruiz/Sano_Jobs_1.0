@@ -116,10 +116,26 @@
                 <!-- Card header -->
                 <div class="card-header border-0">
                   <h3 class="mb-0">Vacantes Registradas</h3>
+                  <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                       <form class="form-inline" method="POST" action="">
+                        <div class="form-group mb-2">
+                            <input class="form-control" id="text" placeholder="2020-12-12">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                           <button class="btn btn-primary">Buscar</button>
+                        </div>
+                       </form>
+
+                    </div>
+                </div>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
+
                   <table class="table align-items-center table-flush">
+
                     <thead class="thead-light">
                       <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
