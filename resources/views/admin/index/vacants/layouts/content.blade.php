@@ -74,6 +74,20 @@
             </div>
         </div>
     @endif
+    @if (session('danger'))
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="alert alert-danger">
+                    {{ session('danger') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
         <div class="container-fluid">
             <div class="header-body">
               <div class="row align-items-center py-4">

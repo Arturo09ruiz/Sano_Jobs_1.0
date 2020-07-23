@@ -68,7 +68,7 @@ class VacantsController extends Controller
 
         $vacant->save();
 
-        return back()->with('info', 'Guardado Correctamente');;
+        return back()->with('info', 'Guardado Correctamente');
     }
 
     /**
@@ -113,6 +113,7 @@ class VacantsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vacant = Vacant::find($id)->delete();
+        return back()->with('danger', 'Eliminado Correctamente');
     }
 }
