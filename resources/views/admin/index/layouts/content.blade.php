@@ -130,7 +130,7 @@
               <!-- Chart -->
               <div class="chart">
                 <!-- Chart wrapper -->
-                <canvas id="myChartt" class="chart-canvas"></canvas>
+                <canvas id="vacants" class="chart-canvas"></canvas>
               </div>
             </div>
           </div>

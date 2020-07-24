@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use Vacant;
+
 
 class AdminController extends Controller
 {
@@ -21,7 +23,7 @@ class AdminController extends Controller
 
 
 
-
+        // $enero = Vacant::where('user_id', auth()->user()->id);
         return view('admin.index.app');
     }
 }
