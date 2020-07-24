@@ -10,6 +10,8 @@ use App\Category;
 use App\Team;
 use App\Country;
 use Auth;
+use Carbon\Carbon;
+
 use App\Http\Requests\VacantStoreRequest;
 
 
@@ -119,6 +121,21 @@ class VacantsController extends Controller
         $vacants = Vacant::orderBy('id', 'desc')->where('status', 'PUBLISHED')->where('deadline', $date)->paginate(10);
         return view('admin.index.vacants.index', compact('vacants', 'categories', 'teams', 'countries'));
 
+    }
+
+
+    public function vacant_deadline()
+    {
+        $date = date("Y")."/".date("n")."/".date("d");
+        $status = ('DEAD');
+        $vacants = Vacant::where('status', 'PUBLISHED')->where('deadline', $date)->get();
+        foreach($vacants as $vacant){
+            $vacant_id = $vacant->id;
+            $vacan = Vacant::find($vacant_id);
+            $vacan->status = $status;
+            $vacan->save();
+            echo 'Status Cambiado Correctamente';
+        }
     }
     /**
      * Remove the specified resource from storage.

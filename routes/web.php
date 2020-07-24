@@ -49,6 +49,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
     Route::get('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
 
+    Route::any('0101010100101021727162451762198238733112223', 'Admin\VacantsController@vacant_deadline');
+
+
 
 
 
