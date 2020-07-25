@@ -20,6 +20,8 @@ Auth::routes();
 Route::redirect('/', 'inicio', 301);
 
 Route::get('/inicio', 'Web\PageController@index')->name('index');
+Route::post('/inicio', 'Web\UsersController@register')->name('register_user');
+
 
 
 Route::get('/offline', function () {
@@ -51,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::any('0101010100101021727162451762198238733112223', 'Admin\VacantsController@vacant_deadline');
 
     Route::any('users-reset', 'Admin\UsersController@reset')->name('users-reset');
+
 
 
 
