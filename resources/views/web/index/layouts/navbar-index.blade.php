@@ -127,7 +127,7 @@
 <button class="btn btn-primary d-lg-none">
     <li class="nav-item d-lg-none">
 
-        <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#inicioModal" >
+        <a class="nav-link nav-link-icon" data-toggle="modal" data-target="#registerModal" >
             <span class="btn-inner--icon">
                 <i class="letra fa fa-address-book"></i>
               </span>
@@ -138,7 +138,7 @@
 </button>
 <!-- show -->
     <li class="nav-item prueba">
-        <a href="" data-toggle="modal" data-target="#exampleModal" class="btn btn-neutral btn-icon">
+        <a href="" data-toggle="modal" data-target="#registerModal" class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">
               <i class="fa fa-address-book"></i>
             </span>
