@@ -48,8 +48,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('vacants-status/{id}', 'Admin\VacantsController@status')->name('status_vacant');
     Route::post('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
     Route::get('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
-
     Route::any('0101010100101021727162451762198238733112223', 'Admin\VacantsController@vacant_deadline');
+
+    Route::get('users-reset', 'Admin\UsersController@reset')->name('users-reset');
 
 
 
