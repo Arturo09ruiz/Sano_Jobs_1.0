@@ -117,8 +117,8 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Vacantes Registradas</h5>
-                        <span class="h2 font-weight-bold mb-0">{{$vacants_number}}</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Equipos Registrados</h5>
+                        <span class="h2 font-weight-bold mb-0">{{$teams_number}}</span>
                       </div>
                       <div class="col-auto">
                         <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">

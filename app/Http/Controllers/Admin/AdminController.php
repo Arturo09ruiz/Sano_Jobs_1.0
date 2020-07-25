@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Vacant;
 use App\User;
-
+use App\Team;
 
 class AdminController extends Controller
 {
@@ -37,7 +37,8 @@ class AdminController extends Controller
 
         $vacants_number = Vacant::all()->count();
         $users_number = User::all()->count();
+        $teams_number = Team::all()->count();
 
-        return view('admin.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number','users_number'));
+        return view('admin.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number','users_number','teams_number'));
     }
 }
