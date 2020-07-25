@@ -21,7 +21,18 @@
 
   <script src="{{ asset('vendor/jquery/jquery.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}" type="text/javascript"></script>
-
+<style>
+    .henry_hover{
+        text-align: center;
+        display: none;
+    }
+    .henry_change{
+        text-align: center;
+        display: block !important;
+        font-size: 12px;
+        color:#c7c7c7;
+    }
+</style>
 </head>
 
 
@@ -35,7 +46,9 @@
 
 
     <script>
-     
+        $("#cuncils").click(function(){
+            document.getElementById('text_henry').className = 'henry_change';
+	    });
         $("#country").change(function(e){
           console.log(e);
           var country_id =

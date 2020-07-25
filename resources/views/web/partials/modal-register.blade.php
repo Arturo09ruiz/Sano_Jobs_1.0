@@ -58,8 +58,10 @@
                   </div>
 
                   <div class="form-group">
+                    <p id="text_henry" class="henry_hover">*Si no está seguro sobre su Consejo de Coordinación, consulte con sus Líderes</p>
+
                     <div class="input-group input-group-alternative mb-3">
-                      <select id="cuncils" class="js-example-basic-single form-control" required name="council_id">
+                      <select id="cuncils" class="cuncils js-example-basic-single form-control" required name="council_id">
                         <option value="" >Selecciona el Consejo de Coordinación</option>
                       </select>
                     </div>
@@ -80,7 +82,10 @@
                       <input class="custom-control-input" required id="customCheckRegister" type="checkbox">
                       <label class="custom-control-label" for="customCheckRegister"><span>Acepto Los <a href="condiciones.html">Términos Y Condiciones del uso de la Aplicación</a></span></label>
                     </div>
-                  </div>
+
+                    <span class="text-center"></span>
+
+                </div>
                 </div>
               </form>
 
