@@ -11,8 +11,8 @@
         </div>
         <div class="modal-body">
 
-            <form role="form">
-
+            <form method="POST" action="{{route('register_user')}}" role="form">
+@csrf
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
@@ -87,13 +87,14 @@
 
                 </div>
                 </div>
-              </form>
+
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <button  type="submit" class="btn test-buuton btn-primary">Crear Cuenta</button>
         </div>
+    </form>
       </div>
     </div>
   </div>

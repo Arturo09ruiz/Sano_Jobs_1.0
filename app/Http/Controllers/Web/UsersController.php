@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+
+
+    public function register(Request $request)
+    {
+        dd("hj");
+    }
     /**
      * Display a listing of the resource.
      *
