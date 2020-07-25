@@ -29,6 +29,8 @@
     @extends('web.index.layouts.navbar-index')
     @extends('web.index.layouts.content-index')
     @extends('web.partials.modal-sesion')
+    @extends('web.partials.modal-register')
+
 
 
 
