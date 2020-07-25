@@ -91,10 +91,10 @@
                   <div class="row">
                     <div class="col-md-8"></div>
                     <div class="col-md-4">
-                       <form class="form-inline" method="POST" action="{{route('users_reset')}}">
+                       <form class="form-inline" method="POST" action="{{route('users-reset')}}">
                         @csrf
                         <div class="form-group mb-2">
-                            <input class="form-control" name="date" id="text" placeholder="Ingresar Email">
+                            <input class="form-control" name="email" type="email"  placeholder="Ingresar Email">
                         </div>
                         <div class="form-group mx-sm-3 mb-2">
                            <button class="btn btn-primary">Buscar</button>

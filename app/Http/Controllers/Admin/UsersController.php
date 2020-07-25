@@ -27,6 +27,17 @@ class UsersController extends Controller
         return view('admin.index.users.index', compact('users', 'countries', 'teams', 'roles'));
     }
 
+    public function reset(Request $request)
+    {
+
+        $users = User::where('email', $request->email)->get();
+        $teams = Team::all();
+        $roles = Role::all();
+        $countries = Country::all();
+        return view('admin.index.users.index', compact('users', 'countries', 'teams', 'roles'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -97,8 +108,9 @@ class UsersController extends Controller
         $user->password  = Hash::make($request->password);
         $user->save();
 
-        return back();
+        return redirect()->route('users.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -109,6 +121,6 @@ class UsersController extends Controller
     public function destroy($id)
     {
         $users = User::find($id)->delete();
-        return back();
+        return redirect()->route('users.index');
     }
 }
