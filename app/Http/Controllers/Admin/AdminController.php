@@ -34,7 +34,8 @@ class AdminController extends Controller
         $noviembre = Vacant::where('created_at', 'LIKE', "%2020-11%")->get()->count();
         $diciembre = Vacant::where('created_at', 'LIKE', "%2020-12%")->get()->count();
 
+        $vacants_number=Vacant::all()->count();
 
-        return view('admin.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'));
+        return view('admin.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number'));
     }
 }
