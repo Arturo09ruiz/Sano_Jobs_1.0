@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
 
-                      <select id="country" class="js-example-basic-single form-control" required name="country_id">
+                      <select id="country" class="js-example-basic-single country form-control" required name="country_id">
                         <option value="0" disabled selected>Selecciona el Pais</option>
 
                         @foreach ($countries as $country)
