@@ -74,30 +74,61 @@
           </div>
           <!-- Card stats -->
           <div class="row">
-            <div class="col-xl-2 col-md-6">
 
-            </div>
-            <div class="col-xl-2 col-md-6">
-
-            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Vacantes Registradas</h5>
+                        <span class="h2 font-weight-bold mb-0">{{$vacants_number}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                          <i class="fab fa-wpforms"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="col-xl-4 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Vacantes Registradas</h5>
-                      <span class="h2 font-weight-bold mb-0">{{$vacants_number}}</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Usuarios Registrados</h5>
+                      <span class="h2 font-weight-bold mb-0">{{$users_number}}</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                        <i class="ni ni-chart-pie-35"></i>
+                      <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                        <i class="fa fa-user"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Vacantes Registradas</h5>
+                        <span class="h2 font-weight-bold mb-0">{{$vacants_number}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                          <i class="ni ni-chart-pie-35"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="col-xl-2 col-md-6">
 
             </div>
