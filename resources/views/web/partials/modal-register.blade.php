@@ -29,7 +29,7 @@
                     <input class="form-control" required placeholder="Ingresa Tu Email" type="email">
                   </div>
                 </div>
-                <div class="form-group focused">
+                <div class="form-group">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-key"></i></span>
@@ -37,8 +37,11 @@
                     <input class="form-control" required placeholder="Ingresa Tu Contraseña" type="password">
                   </div>
                 </div>
-
-
+                <div class="form-group focused">
+                    <div class="input-group input-group-alternative">
+                      <input class="form-control" required placeholder="Confirmar Contraseña" type="password">
+                    </div>
+                  </div>
                 <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
 
@@ -57,7 +60,7 @@
                   <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <select id="cuncils" class="js-example-basic-single form-control" required name="council_id">
-                        <option value="" >Selecciona el Consejo</option>
+                        <option value="" >Selecciona el Consejo de Coordinación</option>
                       </select>
                     </div>
                   </div>
@@ -66,7 +69,7 @@
                   <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
                       <select id="cities" class="js-example-basic-single form-control" required name="city_id">
-                        <option value="" disabled selected>Selecciona la Ciudad</option>
+                        <option value="" disabled selected>Selecciona tu Ciudad</option>
                       </select>
                     </div>
                   </div>
