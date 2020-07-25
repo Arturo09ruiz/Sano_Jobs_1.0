@@ -45,6 +45,22 @@
     <!-- Arturo JS -->
     <script src="{{ asset('admin/js/1.js') }}"></script>
     <script>
+        var enero = JSON.parse("{{ json_encode($enero) }}")
+        var febrero = JSON.parse("{{ json_encode($febrero) }}")
+        var marzo = JSON.parse("{{ json_encode($marzo) }}")
+        var abril = JSON.parse("{{ json_encode($abril) }}")
+        var mayo = JSON.parse("{{ json_encode($mayo) }}")
+        var junio = JSON.parse("{{ json_encode($junio) }}")
+        var julio = JSON.parse("{{ json_encode($julio) }}")
+        var agosto = JSON.parse("{{ json_encode($agosto) }}")
+        var septiembre = JSON.parse("{{ json_encode($septiembre) }}")
+        var octubre = JSON.parse("{{ json_encode($octubre) }}")
+        var noviembre = JSON.parse("{{ json_encode($noviembre) }}")
+        var diciembre = JSON.parse("{{ json_encode($diciembre) }}")
+
+
+
+
         var ctx = document.getElementById('vacants');
         var vacants = new Chart(ctx, {
             type: 'line',
@@ -52,7 +68,7 @@
                 labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre'],
                 datasets: [{
                     label: '# De este mes',
-                    data: [12, 19, 3, 5, 2, 3,12,32,23,21,23,12],
+                    data: [enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
