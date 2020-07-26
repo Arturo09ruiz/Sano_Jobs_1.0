@@ -11,7 +11,16 @@ class UsersController extends Controller
 
     public function register(Request $request)
     {
-        dd("hj");
+
+        $pass = $request->password;
+        $pass_c = $request->password_c;
+
+        if($pass == $pass_c){
+        }else{
+            return redirect()->route('index')->with('danger', 'Las Contraseñas No Coinciden');
+        };
+
+
     }
     /**
      * Display a listing of the resource.

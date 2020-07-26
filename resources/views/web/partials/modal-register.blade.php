@@ -18,7 +18,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-user-o"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Ingresa Tu Nombre" required type="text">
+                    <input class="form-control" name="name" placeholder="Ingresa Tu Nombre" required type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -26,7 +26,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                     </div>
-                    <input class="form-control" required placeholder="Ingresa Tu Email" type="email">
+                    <input class="form-control" name="email" required placeholder="Ingresa Tu Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -34,12 +34,12 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-key"></i></span>
                     </div>
-                    <input class="form-control" required placeholder="Ingresa Tu Contraseña" type="password">
+                    <input class="form-control" name="password" required placeholder="Ingresa Tu Contraseña" type="password">
                   </div>
                 </div>
                 <div class="form-group focused">
                     <div class="input-group input-group-alternative">
-                      <input class="form-control" required placeholder="Confirmar Contraseña" type="password">
+                      <input class="form-control" name="password_c" required placeholder="Confirmar Contraseña" type="password">
                     </div>
                   </div>
                 <div class="form-group">
@@ -88,6 +88,21 @@
                 </div>
                 </div>
 
+                @if (session('danger'))
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="alert alert-danger">
+                                {{ session('danger') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+              
 
         </div>
         <div class="modal-footer">
