@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRegisterRequest;
 
 class UsersController extends Controller
 {
 
 
-    public function register(Request $request)
+    public function register(UserRegisterRequest $request)
     {
 
         $pass = $request->password;
@@ -20,7 +21,7 @@ class UsersController extends Controller
             return redirect()->route('index')->with('danger', 'Las Contraseñas No Coinciden');
         };
 
-        
+
 
     }
     /**

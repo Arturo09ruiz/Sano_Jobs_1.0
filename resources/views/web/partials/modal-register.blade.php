@@ -103,6 +103,23 @@
                 </div>
             @endif
 
+            @if (count($errors))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="alert alert-danger">
+                            @foreach ($errors->all() as $error)
+                                    {{$error}}
+                            @endforeach
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        @endif
 
         </div>
         <div class="modal-footer">
