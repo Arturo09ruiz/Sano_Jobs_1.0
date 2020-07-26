@@ -20,6 +20,7 @@ class UsersController extends Controller
             return redirect()->route('index')->with('danger', 'Las Contraseñas No Coinciden');
         };
 
+        
 
     }
     /**

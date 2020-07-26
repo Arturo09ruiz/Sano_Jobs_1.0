@@ -88,7 +88,7 @@
                 </div>
                 </div>
 
-                @if (session('danger'))
+            @if (session('danger'))
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 ">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             @endif
-              
+
 
         </div>
         <div class="modal-footer">
