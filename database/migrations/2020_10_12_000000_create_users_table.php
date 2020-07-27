@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('conuncil_id')->unsigned()->nullable();
             $table->unsignedBigInteger('city_id')->unsigned()->nullable();
             $table->unsignedBigInteger('role_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('team_id')->unsigned();
+            $table->unsignedBigInteger('team_id')->unsigned()->nullable();
             $table->timestamps();
 
 
