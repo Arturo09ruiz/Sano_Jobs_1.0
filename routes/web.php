@@ -52,9 +52,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
     Route::any('0101010100101021727162451762198238733112223', 'Admin\VacantsController@vacant_deadline');
     Route::any('users-reset', 'Admin\UsersController@reset')->name('users-reset');
-    
-
 });
+
+
+Route::get('/panel-administrativo-gerente', 'Manager\AdminController@index')->name('admin-manager');
+
 
 
 
