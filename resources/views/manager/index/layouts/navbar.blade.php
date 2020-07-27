@@ -11,57 +11,15 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-            @if (auth()->user()->role_id  == '1')
+            @if (auth()->user()->role_id  == '2')
             <li class="nav-item">
-              <a class="nav-link active" href="{{route('admin')}}">
+              <a class="nav-link active" href="{{route('admin-manager')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Panel de Control</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('categories.index')}}">
-                <i class="ni ni-bullet-list-67 "></i>
-                <span class="nav-link-text">Categorías</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('countries.index')}}">
-                <i class="fa fa-globe-americas "></i>
-                <span class="nav-link-text">Paises</span>
-              </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('councils.index')}}">
-                  <i class="fa fa-building"></i>
-                  <span class="nav-link-text">Consejos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('cities.index')}}">
-                  <i class="fa fa-city "></i>
-                  <span class="nav-link-text">Ciudades</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('roles.index')}}">
-                  <i class="fa fa-user-tag"></i>
-                  <span class="nav-link-text">Roles</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('teams.index')}}">
-                  <i class="fa fa-users"></i>
-                  <span class="nav-link-text">Equipos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('users.index')}}">
-                  <i class="fa fa-user"></i>
-                  <span class="nav-link-text">Usuarios</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('vacants.index')}}">
+                <a class="nav-link" href="{{route('')}}">
                   <i class="fab fa-wpforms"></i>
                   <span class="nav-link-text">Vacantes</span>
                 </a>
