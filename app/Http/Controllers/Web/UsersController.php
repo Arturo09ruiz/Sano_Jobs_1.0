@@ -26,9 +26,9 @@ class UsersController extends Controller
         $user->name  =  $request->name;
         $user->email   =  $request->email;
         $user->password  = Hash::make($request->password);
-        $vacant->business  =  $request->business;
-        $vacant->email  =  $request->email;
-        $vacant->telefono  =  $request->telefono;
+        $user->country_id   =  $request->country_id;
+        $user->conuncil_id   =  $request->council_id;
+        $vacant->city_id   =  $request->city_id ;
         $vacant->deadline  =  $request->deadline;
         $vacant->user_id  =  Auth::user()->id;
         $vacant->country_id =  $request->country_id;

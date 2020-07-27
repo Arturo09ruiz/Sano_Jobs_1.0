@@ -79,7 +79,7 @@
                 <div class="row my-4">
                   <div class="col-12">
                     <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" required id="customCheckRegister" type="checkbox">
+                      <input required class="custom-control-input" required id="customCheckRegister" type="checkbox">
                       <label class="custom-control-label" for="customCheckRegister"><span>Acepto Los <a href="condiciones.html">Términos Y Condiciones del uso de la Aplicación</a></span></label>
                     </div>
 
