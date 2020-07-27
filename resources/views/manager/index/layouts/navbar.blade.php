@@ -19,7 +19,7 @@
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('')}}">
+                <a class="nav-link" href="{{route('vacants-manager.index')}}">
                   <i class="fab fa-wpforms"></i>
                   <span class="nav-link-text">Vacantes</span>
                 </a>
