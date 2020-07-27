@@ -10,6 +10,7 @@ use App\User;
 use App\Country;
 use App\Team;
 use App\Role;
+use App\Http\Requests\AdminUsersRegisterRequest;
 
 
 
@@ -54,7 +55,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AdminUsersRegisterRequest $request)
     {
         $user = new User;
 
