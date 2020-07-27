@@ -38,6 +38,7 @@ Route::POST('/cities/getcities','Admin\CitiesController@getCitiesByCouncilId');
 
 //Admin
 Route::group(['middleware' => 'auth'], function () {
+    //Admin
     Route::get('/panel-administrativo', 'Admin\AdminController@index')->name('admin');
     Route::resource('categories', 'Admin\CategoriesController');
     Route::resource('countries', 'Admin\CountriesController');
@@ -52,10 +53,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('vacants-dead', 'Admin\VacantsController@dead')->name('dead_vacant');
     Route::any('0101010100101021727162451762198238733112223', 'Admin\VacantsController@vacant_deadline');
     Route::any('users-reset', 'Admin\UsersController@reset')->name('users-reset');
+
+    //Manager
+    Route::get('/panel-administrativo-gerente', 'Manager\AdminController@index')->name('admin-manager');
 });
 
 
-Route::get('/panel-administrativo-gerente', 'Manager\AdminController@index')->name('admin-manager');
 
 
 
