@@ -28,19 +28,14 @@ class UsersController extends Controller
         $user->password  = Hash::make($request->password);
         $user->country_id   =  $request->country_id;
         $user->conuncil_id   =  $request->council_id;
-        $vacant->city_id   =  $request->city_id ;
-        $vacant->deadline  =  $request->deadline;
-        $vacant->user_id  =  Auth::user()->id;
-        $vacant->country_id =  $request->country_id;
-        $vacant->conuncil_id   =  $request->council_id;
-        $vacant->city_id  =  $request->city_id;
-        $vacant->team_id  =  $request->team_id;
-        $vacant->category_id   =  $request->category_id;
+        $user->city_id   =  $request->city_id ;
+        $user->role_id   =  0;
+        $user->user_id  =  Auth::user()->id;
+        $user->team_id  =  0;
 
+        $user->save();
 
-        $vacant->save();
-
-        return redirect()->route('vacants.index')->with('info', 'Guardado Correctamente');
+        return redirect()->route('index');
 
     }
     /**
