@@ -35,7 +35,7 @@ class UsersController extends Controller
 
         $user->save();
 
-        return redirect()->route('index');
+        return redirect()->route('index')->with('info', 'Proceso de registro completado, Iniciar sesión');
 
     }
     /**

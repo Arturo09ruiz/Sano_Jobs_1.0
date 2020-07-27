@@ -9,22 +9,23 @@
 
 
         {{-- REGISTER SUCCESS --}}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <br>
-                    <div class="alert alert-success">
-                        Proceso de registro completado, Iniciar sesión
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        @if (session('info'))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <br>
+                        <div class="alert alert-success">
+                            {{ session('info') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                     </div>
+                    <div class="col-md-3"></div>
                 </div>
-                <div class="col-md-3"></div>
-
             </div>
-        </div>
+        @endif
 
 
 
