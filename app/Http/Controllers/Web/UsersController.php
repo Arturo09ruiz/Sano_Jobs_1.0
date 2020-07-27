@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRegisterRequest;
+use Illuminate\Support\Facades\Hash;
+
 use App\User;
 class UsersController extends Controller
 {
@@ -29,9 +31,8 @@ class UsersController extends Controller
         $user->country_id   =  $request->country_id;
         $user->conuncil_id   =  $request->council_id;
         $user->city_id   =  $request->city_id ;
-        $user->role_id   =  0;
-        $user->user_id  =  Auth::user()->id;
-        $user->team_id  =  0;
+        $user->role_id   =  5;
+        $user->team_id  =  1;
 
         $user->save();
 
