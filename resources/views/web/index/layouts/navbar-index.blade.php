@@ -62,7 +62,7 @@
             @elseif(auth()->user()->role_id  == '2')
 
             <li class="nav-item d-lg-none">
-                <a href="{{route('admin')}}" class="nav-link nav-link-icon">
+                <a href="{{route('admin-manager')}}" class="nav-link nav-link-icon">
                     <i class="letra fa fa-desktop mr-2"></i>
                     <span class="letra ">Panel Administrativo</span>
                 </a>
@@ -71,7 +71,7 @@
 
         <!-- show -->
             <li class="nav-item prueba">
-                <a href="{{route('admin')}}" class="btn btn-neutral btn-icon">
+                <a href="{{route('admin-manager')}}" class="btn btn-neutral btn-icon">
                     <span class="btn-inner--icon">
                       <i class="fa fa-desktop mr-2"></i>
                     </span>
