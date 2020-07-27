@@ -32,7 +32,6 @@ class UsersController extends Controller
         $user->conuncil_id   =  $request->council_id;
         $user->city_id   =  $request->city_id ;
         $user->role_id   =  5;
-        $user->team_id  =  1;
 
         $user->save();
 
