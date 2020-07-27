@@ -24,8 +24,8 @@ class UsersController extends Controller
         $user = new User;
 
         $user->name  =  $request->name;
-        $vacant->description  =  $request->description;
-        $vacant->requirements  =  $request->requirements;
+        $user->email   =  $request->email;
+        $user->password  = Hash::make($request->password);
         $vacant->business  =  $request->business;
         $vacant->email  =  $request->email;
         $vacant->telefono  =  $request->telefono;
