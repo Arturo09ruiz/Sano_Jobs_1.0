@@ -19,8 +19,8 @@
 </head>
 
 <body>
-    @include('admin.index.layouts.navbar')
-    @include('admin.index.layouts.content')
+    @include('manager.index.layouts.navbar')
+    @include('manager.index.layouts.content')
 
 
 
