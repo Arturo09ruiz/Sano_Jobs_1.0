@@ -55,7 +55,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::any('users-reset', 'Admin\UsersController@reset')->name('users-reset');
 
     //Manager
+
     Route::get('/panel-administrativo-gerente', 'Manager\AdminController@index')->name('admin-manager');
+    Route::resource('/vacants-manager', 'Manager\VacantsController');
 });
 
 
