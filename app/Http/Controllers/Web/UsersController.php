@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRegisterRequest;
-
+use App\User;
 class UsersController extends Controller
 {
 
@@ -21,7 +21,26 @@ class UsersController extends Controller
             return redirect()->route('index')->with('danger', 'Las Contraseñas No Coinciden');
         };
 
+        $user = new User;
 
+        $user->name  =  $request->name;
+        $vacant->description  =  $request->description;
+        $vacant->requirements  =  $request->requirements;
+        $vacant->business  =  $request->business;
+        $vacant->email  =  $request->email;
+        $vacant->telefono  =  $request->telefono;
+        $vacant->deadline  =  $request->deadline;
+        $vacant->user_id  =  Auth::user()->id;
+        $vacant->country_id =  $request->country_id;
+        $vacant->conuncil_id   =  $request->council_id;
+        $vacant->city_id  =  $request->city_id;
+        $vacant->team_id  =  $request->team_id;
+        $vacant->category_id   =  $request->category_id;
+
+
+        $vacant->save();
+
+        return redirect()->route('vacants.index')->with('info', 'Guardado Correctamente');
 
     }
     /**
