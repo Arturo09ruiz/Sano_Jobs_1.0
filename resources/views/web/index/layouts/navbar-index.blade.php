@@ -1,7 +1,12 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+
     <div class="container">
+
         <a class="navbar-brand" href="index.html">Inicio</a>
         <a class="navbar-brand" href="#"> <u>Vacantes de Empleo</u> </a>
+        <a href="">
+
+        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +26,10 @@
                         </button>
                     </div>
                 </div>
+
             </div>
+
+
 
             @if (Auth::check())
 
