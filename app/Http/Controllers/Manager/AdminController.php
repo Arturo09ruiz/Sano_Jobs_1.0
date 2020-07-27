@@ -38,6 +38,6 @@ class AdminController extends Controller
 
 
 
-        // return view('admin.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number','users_number','teams_number'));
+        return view('manager.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number','users_number','teams_number'));
     }
 }
