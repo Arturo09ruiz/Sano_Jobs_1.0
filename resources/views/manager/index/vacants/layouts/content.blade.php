@@ -152,7 +152,7 @@
                         <td>
                             <span class="badge badge-dot mr-4">
                               <span class="status">
-                                  <form method="POST" action="{{route('vacants.destroy', $vacant->id)}}">
+                                  <form method="POST" action="{{route('vacants-manager.destroy', $vacant->id)}}">
                                     @csrf
                                     @method('DELETE')
                                       <button class="btn btn-danger">Eliminar</button>
