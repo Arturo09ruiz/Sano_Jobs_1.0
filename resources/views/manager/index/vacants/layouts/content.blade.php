@@ -232,4 +232,4 @@
     </div>
   </div>
 
-@include('admin.index.vacants.layouts.create')
+@include('manager.index.vacants.layouts.create')
