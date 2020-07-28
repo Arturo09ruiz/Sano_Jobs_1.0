@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Vacant;
-use App\Country;
 use App\Category;
-use App\Team;
 use Auth;
 
 
@@ -21,11 +19,10 @@ class VacantsController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
+
         $categories = Category::all();
-        $teams = Team::all();
         $vacants = Vacant::orderBy('id', 'desc')->where('status', 'PUBLISHED')->where('user_id', Auth::user()->id)->paginate(10);
-        return view('manager.index.vacants.index', compact('vacants', 'categories', 'teams', 'countries'));
+        return view('manager.index.vacants.index', compact('vacants', 'categories'));
 
     }
 
