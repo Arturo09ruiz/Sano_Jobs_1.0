@@ -39,11 +39,9 @@ class AdminController extends Controller
         $diciembre = Vacant::where('created_at', 'LIKE', "%2020-12%")->where('user_id', Auth::user()->id)->get()->count();
 
         $vacants_number = Vacant::where('user_id', Auth::user()->id)->count();
-        $users_number = User::all()->count();
-        $teams_number = Team::all()->count();
 
 
 
-        return view('manager.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number','users_number','teams_number'));
+        return view('manager.index.app', compact('enero', 'febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre','vacants_number'));
     }
 }
