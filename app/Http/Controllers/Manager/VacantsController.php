@@ -92,6 +92,7 @@ class VacantsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vacant = Vacant::find($id)->delete();
+        return redirect()->route('vacants-manager.index')->with('danger', 'Eliminado Correctamente');
     }
 }
