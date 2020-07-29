@@ -13,7 +13,7 @@ class VacantsManagerStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class VacantsManagerStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'description' => 'required',
+            'requirements' => 'required',
+            'business' => 'required',
+            'email' => 'required',
+            'telefono' => 'required',
+            'deadline' => 'required',
+            'city_id' => 'required',
+            'category_id' => 'required',
         ];
     }
 }
