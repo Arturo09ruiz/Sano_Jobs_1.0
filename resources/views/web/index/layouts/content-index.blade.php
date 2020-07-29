@@ -65,7 +65,13 @@
 
                 <div class="col-md-2">
                   <div class="posion">
+                    @if (Auth::check())
                     <button type="submit" class="btn btn-visualizar">Buscar</button>
+                    @else
+                    <a class="btn btn-visualizar" data-toggle="modal" data-target="#inicioModal" >
+                        <span class="letra">Buscar</span>
+                    </a>
+                    @endif
                   </div>
 
                 </div>
