@@ -62,26 +62,7 @@
 
 
 
-                <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
 
-
-
-
-                <div>
-                    <div class="requirements" id="requirements">
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-
-                        </div>
-                        <div class="col-md-8">
-                            <button class="btn btn-primary btn_requirements" id="btn-requirements" type="button">Agregar Requerimiento</button>
-
-                        </div>
-                    </div>
-                </div>
-                <br>
 
 
             </div>
@@ -121,6 +102,26 @@
                       <input class="form-control" placeholder="Ingresar Fecha Límite" name="deadline" required type="date">
                     </div>
                 </div>
+                <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
+
+
+
+
+                <div>
+                    <div class="requirements" id="requirements">
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-8">
+                            <button class="btn btn-primary btn_requirements" id="btn-requirements" type="button">Agregar Requerimiento</button>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
             </div>
         </div>
         </div>
