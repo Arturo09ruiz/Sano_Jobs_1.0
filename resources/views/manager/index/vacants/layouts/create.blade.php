@@ -106,6 +106,9 @@
                     <div class="input-group input-group-alternative mb-3">
                       <select class="js-example-basic-single form-control" required name="city_id">
                         <option value="" disabled selected>Selecciona la Ciudad</option>
+                        @foreach ($cities as $city)
+                            <option value="{{$city->id}}">{{$city->name}}</option>
+                        @endforeach
                       </select>
                     </div>
                   </div>

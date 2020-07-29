@@ -20,10 +20,10 @@ class VacantsController extends Controller
      */
     public function index()
     {
-
+        $cities = City::where('council_id', Auth::user()->conuncil_id)->get();
         $categories = Category::all();
         $vacants = Vacant::orderBy('id', 'desc')->where('status', 'PUBLISHED')->where('user_id', Auth::user()->id)->paginate(10);
-        return view('manager.index.vacants.index', compact('vacants', 'categories'));
+        return view('manager.index.vacants.index', compact('vacants', 'categories','cities'));
 
     }
 
