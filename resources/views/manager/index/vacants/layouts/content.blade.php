@@ -102,6 +102,7 @@
                   </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
+                  <a href="#" class="prueba_boton_registrar btn btn-lg btn-success">Descargar Excel</a>
                   <a href="#"  data-toggle="modal" data-target="#registrar_vacant" class="prueba_boton_registrar btn btn-lg btn-neutral"> Registrar</a>
                 </div>
               </div>

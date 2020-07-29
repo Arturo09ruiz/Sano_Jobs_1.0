@@ -106,7 +106,6 @@
 
 
 
-
                 <div>
                     <div class="requirements" id="requirements">
 
