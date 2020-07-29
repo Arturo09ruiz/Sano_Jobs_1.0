@@ -102,7 +102,7 @@
                       <input class="form-control" placeholder="Ingresar Fecha Límite" name="deadline" required type="date">
                     </div>
                 </div>
-                <input type="" class="listrequirements" name="requirements" id="listrequirements">
+                <input type="hidden" class="listrequirements" name="requirements" id="listrequirements">
 
 
 
