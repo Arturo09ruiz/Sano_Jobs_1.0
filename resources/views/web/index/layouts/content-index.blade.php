@@ -53,12 +53,11 @@
 
                 </div>
                 <div class="col-md-4 ">
-                  <select class="js-example-basic-single form-control" name="" id="">
+                  <select class="js-example-basic-single form-control" name="country_id">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
-                    <option value="">Peru </option>
-                    <option value="">Venezuela</option>
-                    <option value="">Colombia</option>
-                    <Option>China</Option>
+                    @foreach ($countries as $country)
+                        <option value="{{$country->id}}">{{$country->name}}</option>
+                    @endforeach
                 </select>
                <br>
                 </div>
