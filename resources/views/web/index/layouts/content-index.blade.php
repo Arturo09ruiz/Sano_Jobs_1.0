@@ -65,9 +65,7 @@
 
                 <div class="col-md-2">
                   <div class="posion">
-                    <a href="vacantes.html" class=" btn btn-visualizar">
-                      <span class="btn-inner--text">Buscar</span>
-                    </a>
+                    <button type="submit" class="btn btn-visualizar">Buscar</button>
                   </div>
 
                 </div>
