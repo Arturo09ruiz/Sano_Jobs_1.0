@@ -41,7 +41,8 @@
 
             <br>
             <div class="container">
-                <form action="">
+                <form action="{{route('vacants-jobs')}}" method="POST">
+                    @csrf
               <div class="row">
                 <div class="col-md-2">
 
@@ -53,7 +54,7 @@
 
                 </div>
                 <div class="col-md-4 ">
-                  <select class="form-control" name="country_id">
+                  <select class="form-control" required name="country_id">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
                     @foreach ($countries as $country)
                         <option value="{{$country->id}}">{{$country->name}}</option>

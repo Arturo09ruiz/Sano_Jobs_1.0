@@ -19,8 +19,12 @@ Auth::routes();
 
 Route::redirect('/', 'inicio', 301);
 
+//INICIO
 Route::get('/inicio', 'Web\PageController@index')->name('index');
 Route::post('/inicio', 'Web\UsersController@register')->name('register_user');
+
+//vacants
+Route::post('/vacantes-de-trabajo', 'Web\VacantsController@index')->name('vacants-jobs');
 
 
 
