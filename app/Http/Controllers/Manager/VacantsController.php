@@ -46,7 +46,26 @@ class VacantsController extends Controller
      */
     public function store(VacantsManagerStoreRequest $request)
     {
-        echo("jheloudah");
+        $vacant = new Vacant;
+
+        $vacant->name  =  $request->name;
+        $vacant->description  =  $request->description;
+        $vacant->requirements  =  $request->requirements;
+        $vacant->business  =  $request->business;
+        $vacant->email  =  $request->email;
+        $vacant->telefono  =  $request->telefono;
+        $vacant->deadline  =  $request->deadline;
+        $vacant->user_id  =  Auth::user()->id;
+        $vacant->country_id =  Auth::user()->country_id;
+        $vacant->conuncil_id   =  Auth::user()->conuncil_id;
+        $vacant->city_id  =  $request->city_id;
+        $vacant->team_id  =  Auth::user()->team_id;
+        $vacant->category_id   =  $request->category_id;
+
+
+        $vacant->save();
+
+        return redirect()->route('vacants-manager.index')->with('info', 'Guardado Correctamente');
     }
 
     /**
