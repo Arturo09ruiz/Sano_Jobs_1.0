@@ -3,7 +3,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="index.html">Inicio</a>
-        <a class="navbar-brand" href="#"> <u>Vacantes de Empleo</u> </a>
+        <a class="navbar-brand" href="#"> <u></u> </a>
         <a href="">
 
         </a>
