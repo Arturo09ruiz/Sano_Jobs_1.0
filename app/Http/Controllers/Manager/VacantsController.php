@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\VacantsManagerStoreRequest;
 use App\Vacant;
 use App\Category;
 use App\City;
@@ -43,9 +44,9 @@ class VacantsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VacantsManagerStoreRequest $request)
     {
-        //
+        echo("jheloudah");
     }
 
     /**
