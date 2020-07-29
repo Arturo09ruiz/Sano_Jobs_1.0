@@ -53,7 +53,7 @@
 
                 </div>
                 <div class="col-md-4 ">
-                  <select class="js-example-basic-single form-control" name="country_id">
+                  <select class="form-control js-example-basic-single" name="country_id">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
                     @foreach ($countries as $country)
                         <option value="{{$country->id}}">{{$country->name}}</option>

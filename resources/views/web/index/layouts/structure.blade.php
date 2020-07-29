@@ -21,6 +21,7 @@
 
   <script src="{{ asset('vendor/jquery/jquery.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}" type="text/javascript"></script>
+
 <style>
     .henry_hover{
         text-align: center;
@@ -118,5 +119,6 @@
         }
 
       </script>
+
 </body>
 </html>
