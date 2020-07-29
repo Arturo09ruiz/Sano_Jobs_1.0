@@ -47,13 +47,13 @@
 
                 </div>
                 <div class="col-md-4">
-                  <input class="form-control" placeholder="Ingresa Tu Palabra Clave. Ej:Administrativo" required type="text">
+                  <input class="form-control" name="keyword" placeholder="Ingresa Tu Palabra Clave. Ej:Administrativo" required type="text">
                   <br>
                   <br>
 
                 </div>
                 <div class="col-md-4 ">
-                  <select class="form-control js-example-basic-single" name="country_id">
+                  <select class="form-control" name="country_id">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
                     @foreach ($countries as $country)
                         <option value="{{$country->id}}">{{$country->name}}</option>
