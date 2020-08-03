@@ -19,7 +19,7 @@ class VacantsController extends Controller
         $keyword = $request->keyword;
         $vacants = Vacant::where('country_id', $country)->where('name', 'LIKE', "%$keyword%")->get();
 
-
+        return view('web.vacants.index');
 
     }
 
