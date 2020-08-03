@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Vacant;
 
 class VacantsController extends Controller
 {
@@ -12,9 +13,14 @@ class VacantsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        echo("ss");
+        $country = $request->country_id;
+        $keyword = $request->keyword;
+        $vacants = Vacant::where('country_id', $country)->where('name', 'LIKE', "%$keyword%")->get();
+
+
+
     }
 
     /**

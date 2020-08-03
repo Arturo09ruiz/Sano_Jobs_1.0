@@ -40,8 +40,16 @@
 <body class="landing-page">
 
     @include('web.index.layouts.navbar-index')
-
     @include('web.index.layouts.content-index')
+
+
+
+
+
+
+
+
+
     @include('web.partials.modal-sesion')
     @include('web.partials.modal-register')
 
