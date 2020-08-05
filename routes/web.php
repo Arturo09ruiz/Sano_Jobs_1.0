@@ -24,7 +24,10 @@ Route::get('/inicio', 'Web\PageController@index')->name('index');
 Route::post('/inicio', 'Web\UsersController@register')->name('register_user');
 
 //vacants
-Route::post('/vacantes-de-trabajo', 'Web\VacantsController@index')->name('vacants-jobs');
+Route::any('/vacantes-de-trabajo', 'Web\VacantsController@index')->name('vacants-jobs');
+Route::any('/vacantes-de-trabajo/Palabra_clave={keyword?}/Pais={country?}', 'Web\VacantsController@index')->name('vacants-jobs');
+
+
 
 
 

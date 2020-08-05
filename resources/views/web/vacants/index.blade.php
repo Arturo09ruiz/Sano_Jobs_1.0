@@ -385,37 +385,38 @@
 
                     <!-- ESCRITORIO -->
                     <div class="test-div-view-desk col-8">
+                        @foreach ($vacants as $vacant)
+
 
                       <div class="border-mag-v">
                       <div class="card">
                         <div class=" card-header">
-                          <b class="test-font ramos"> Asistente Administrativo - EXCON C.A / Ciudad Bolívar</b>
+                          <b class="test-font ramos"> {{$vacant->name}} - {{$vacant->business}} / Ciudad Bolívar</b>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title">Descrición de la Vacante:</h5>
-                          <p class="card-text">La empresa EXCON C.A Busca a un asistente Administrativo, Que se encargue de Administrar las ventas y los ingresos y egresos del almacen </p>
+                          <p class="card-text">{{$vacant->description}} </p>
                           <div class="row">
                             <div class="col-6">
                           <h5 class="card-title">Requerimientos:</h5>
-                          <li class="font-mini">
-                            Puntualidad
-                          </li>
-                          <li class="font-mini">
-                            Amabilidad
-                          </li>
-                          <li class="font-mini">
-                            Ganas de Salir Adelante
-                          </li>
-                          <li class="font-mini">
-                            Conocimiento
-                          </li>
-                          <li class="font-mini">
-                            Experiencia
-                          </li>
+
+                          <?php
+                            $requeriment= json_decode($vacant->requirements);
+                            foreach ($requeriment as $key) {
+                                echo '<li class="font-mini">'. $key->nombre. '</li>';
+                            }
+                          ?>
+                            {{-- @foreach ($vacant->requirements as $requerimient)
+                            <li class="font-mini">
+                                {{$requerimient->nombre}}
+                            </li>
+                            @endforeach --}}
+
+
                         </div>
                         <div class="col-6">
                           <div class="boton-aling">
-                            <a class=" btn btn-white btn-icon">
+                            <a class="btn btn-white btn-icon">
                               <span class="test-grande icon-btn-prueba btn-inner--icon">
                                 <i class="fa fa-file-text mr-2"></i>
                               </span>
@@ -427,168 +428,19 @@
                         </div>
                         </div>
                         <div class="card-footer">
-                          <p class="test">Contacto: <b>Exoca@gmail.com / 0285-232-2231</b> </p>
+                          <p class="test">Contacto: <b>{{$vacant->email}} / {{$vacant->telefono}}</b> </p>
                         </div>
                       </div>
                     </div>
     <br>
+    @endforeach
 
-    <div class="border-mag-v">
-      <div class="card">
-        <div class="card-header">
-          <b class="ramos"> Asistente Administrativo - EXCON C.A / Ciudad Bolívar</b>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Descrición de la Vacante:</h5>
-          <p class="card-text">La empresa EXCON C.A Busca a un asistente Administrativo, Que se encargue de Administrar las ventas y los ingresos y egresos del almacen </p>
-          <div class="row">
-            <div class="col-6">
-          <h5 class="card-title">Requerimientos:</h5>
-          <li class="font-mini">
-            Puntualidad
-          </li>
-          <li class="font-mini">
-            Amabilidad
-          </li>
-          <li class="font-mini">
-            Ganas de Salir Adelante
-          </li>
-          <li class="font-mini">
-            Conocimiento
-          </li>
-          <li class="font-mini">
-            Experiencia
-          </li>
-        </div>
-        <div class="col-6">
-          <div class="boton-aling">
-            <a class=" btn btn-white btn-icon">
-              <span class="icon-btn-prueba btn-inner--icon">
-                <i class="fa fa-file-text mr-2"></i>
-              </span>
-              <span class="icon-btn-prueba   nav-link-inner--text">Aplicar Ahora</span>
-            </a>
-          </div>
 
-        </div>
-        </div>
-        </div>
-        <div class="card-footer">
-          <p class="test">Contacto: <b>Exoca@gmail.com / 0285-232-2231</b> </p>
-        </div>
-      </div>
-    </div>
-    <br>
 
-    <div class="border-mag-v">
-      <div class="card">
-        <div class="card-header">
-          <b class="ramos"> Asistente Administrativo - EXCON C.A / Ciudad Bolívar</b>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Descrición de la Vacante:</h6>
-          <p class="card-text">La empresa EXCON C.A Busca a un asistente Administrativo, Que se encargue de Administrar las ventas y los ingresos y egresos del almacen </p>
-          <div class="row">
-            <div class="col-6">
-          <h5 class="card-title">Requerimientos:</h5>
-          <li class="font-mini">
-            Puntualidad
-          </li>
-          <li class="font-mini">
-            Amabilidad
-          </li>
-          <li class="font-mini">
-            Ganas de Salir Adelante
-          </li>
-          <li class="font-mini">
-            Conocimiento
-          </li>
-          <li class="font-mini">
-            Experiencia
-          </li>
-        </div>
-        <div class="col-6">
-          <div class="boton-aling">
-            <a class=" btn btn-white btn-icon">
-              <span class="icon-btn-prueba btn-inner--icon">
-                <i class="fa fa-file-text mr-2"></i>
-              </span>
-              <span class="icon-btn-prueba   nav-link-inner--text">Aplicar Ahora</span>
-            </a>
-          </div>
-
-        </div>
-        </div>
-        </div>
-        <div class="card-footer">
-          <p class="test">Contacto: <b>Exoca@gmail.com / 0285-232-2231</b> </p>
-        </div>
-      </div>
-    </div>
-    <br>
-
-    <div class="border-mag-v">
-      <div class="card">
-        <div class="card-header">
-          <b class="ramos"> Asistente Administrativo - EXCON C.A / Ciudad Bolívar</b>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Descrición de la Vacante:</h5>
-          <p class="card-text">La empresa EXCON C.A Busca a un asistente Administrativo, Que se encargue de Administrar las ventas y los ingresos y egresos del almacen </p>
-          <div class="row">
-            <div class="col-6">
-          <h5 class="card-title">Requerimientos:</h5>
-          <li class="font-mini">
-            Puntualidad
-          </li>
-          <li class="font-mini">
-            Amabilidad
-          </li>
-          <li class="font-mini">
-            Ganas de Salir Adelante
-          </li>
-          <li class="font-mini">
-            Conocimiento
-          </li>
-          <li class="font-mini">
-            Experiencia
-          </li>
-        </div>
-        <div class="col-6">
-          <div class="boton-aling">
-            <a class=" btn btn-white btn-icon">
-              <span class="icon-btn-prueba btn-inner--icon">
-                <i class="fa fa-file-text mr-2"></i>
-              </span>
-              <span class="icon-btn-prueba   nav-link-inner--text">Aplicar Ahora</span>
-            </a>
-          </div>
-
-        </div>
-        </div>
-        </div>
-        <div class="card-footer">
-          <p class="test">Contacto: <b>Exoca@gmail.com / 0285-232-2231</b> </p>
-        </div>
-      </div>
-    </div>
-    <br>
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
+        {{ $vacants->render() }}
       </ul>
     </nav>
                   </div>

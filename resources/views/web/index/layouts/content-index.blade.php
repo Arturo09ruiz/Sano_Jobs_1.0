@@ -1,3 +1,5 @@
+
+
 <div class="wrapper">
     <div class="section section-hero section-shaped">
       <div class="shape  shape-default">
@@ -48,13 +50,13 @@
 
                 </div>
                 <div class="col-md-4">
-                  <input class="form-control" name="keyword" placeholder="Ingresa Tu Palabra Clave. Ej:Administrativo"  type="text">
+                  <input class="form-control keyword" id="keyword" name="keyword" placeholder="Ingresa Tu Palabra Clave. Ej:Administrativo"  type="text">
                   <br>
                   <br>
 
                 </div>
                 <div class="col-md-4 ">
-                  <select class="form-control"  name="country_id">
+                  <select class="form-control country_id" id="country_id"  name="country_id">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
                     @foreach ($countries as $country)
                         <option value="{{$country->id}}">{{$country->name}}</option>
@@ -67,7 +69,7 @@
                 <div class="col-md-2">
                   <div class="posion">
                     @if (Auth::check())
-                    <button type="submit" class="btn btn-visualizar">Buscar</button>
+                    <button type="button" id="search" class="btn btn-visualizar">Buscar</button>
                     @else
                     <a class="btn btn-visualizar" data-toggle="modal" data-target="#inicioModal" >
                         <span class="letra">Buscar</span>

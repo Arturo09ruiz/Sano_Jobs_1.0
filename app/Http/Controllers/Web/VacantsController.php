@@ -8,82 +8,52 @@ use App\Vacant;
 
 class VacantsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
+    public function index($keyword, $country)
     {
-        $country = $request->country_id;
-        $keyword = $request->keyword;
-        $vacants = Vacant::where('country_id', $country)->where('name', 'LIKE', "%$keyword%")->get();
 
-        return view('web.vacants.index');
+        // if(empty($request->all())){
 
+        //     $vacants = Vacant::paginate(4);
+        //     return view('web.vacants.index', compact('vacants'));
+        // }
+
+        // $country = $request->country_id;
+        // $keyword = $request->keyword;
+
+        $vacants = Vacant::where('country_id', $country)
+            ->where('name', 'LIKE', "%$keyword%")
+            ->paginate(4);
+
+        return view('web.vacants.index', compact('vacants'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

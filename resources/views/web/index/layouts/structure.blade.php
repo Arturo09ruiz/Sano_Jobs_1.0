@@ -57,6 +57,15 @@
 
 
     <script>
+
+        $( "#search" ).on( "click", function() {
+            $keyword = $('#keyword').val();
+            $country_id = $('#country_id').val();
+            window.location = "/vacantes-de-trabajo/Palabra_clave=" + $keyword + "/Pais=" + $country_id;
+
+        });
+
+
         $("#cuncils").click(function(){
             document.getElementById('text_henry').className = 'henry_change';
 	    });
