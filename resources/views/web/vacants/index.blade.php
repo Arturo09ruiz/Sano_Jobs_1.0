@@ -308,22 +308,14 @@
 
                         <li class="points">
 
-                           <li><a class="dropdown-toggle list-black"  onclick="mostrar();" href="#">Categorias</a></li>
-                            <div class="mag" id="mostrarOcultar" >
-                                <ul class="points">
-                                    <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Inmobiliaria</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Hoteleria</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Electricidad</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Tecnología</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Agricultura</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Administración</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Contabilidad</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Plomeria</li>
-                                    <li class="points font-body-text-black"><input type="checkbox"> Medicina</li>
-
-                                </ul>
+                            <a class="list-black" href="#">Categorias:</a>
+                            <div>
+                              <select class="js-example-basic-single form-control" name="" id="">
+                                <option value="" disabled selected>Seleccionar Categoria</option>
+                               
+                            </select>
                             </div>
+
     <br>
 
                             <a class="list-black" href="#">Ubicación:</a>
@@ -373,8 +365,20 @@
                    <br>
 
                         </li>
+                        <div class="row">
+                            <div class="col-md-2">
 
-                        <button class="btn btn-white">Realizar Busqueda </button>
+                            </div>
+                            <div class="col-md-10">
+                                <button class="btn btn-white">
+                                    <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar Busqueda</span>
+                                </button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                        </div>
+
                     </div>
 
                   </div>

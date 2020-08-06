@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Vacant;
+use App\Category;
 
 class VacantsController extends Controller
 {
@@ -19,9 +20,10 @@ class VacantsController extends Controller
             $vacants == Vacantt::All()->paginate(4);
         }
 
+        $categories = Category::all();
 
 
-        return view('web.vacants.index', compact('vacants'));
+        return view('web.vacants.index', compact('vacants' ,'categories'));
     }
 
 
