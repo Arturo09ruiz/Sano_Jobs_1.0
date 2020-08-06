@@ -61,7 +61,13 @@
         $( "#search" ).on( "click", function() {
             $keyword = $('#keyword').val();
             $country_id = $('#country_id').val();
-            window.location = "/vacantes-de-trabajo/Palabra_clave=" + $keyword + "/Pais=" + $country_id;
+            $council_id = "w";
+            $city_id = "a";
+            $deadline = "s";
+            $created = "d";
+            $category = "f";
+
+            window.location = "/vacantes-de-trabajo/Palabra_clave=" + $keyword + "/" + $country_id + "/" + $council_id + "/" + $city_id + "/" + $deadline + "/" + $created + "/" + $category;
 
         });
 

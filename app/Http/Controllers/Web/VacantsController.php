@@ -8,21 +8,18 @@ use App\Vacant;
 
 class VacantsController extends Controller
 {
-    public function index($keyword, $country)
+    public function index($keyword, $country, $council, $city, $deadline, $created, $category)
     {
 
-        // if(empty($request->all())){
-
-        //     $vacants = Vacant::paginate(4);
-        //     return view('web.vacants.index', compact('vacants'));
-        // }
-
-        // $country = $request->country_id;
-        // $keyword = $request->keyword;
-
-        $vacants = Vacant::where('country_id', $country)
+        if($council == 'w'){
+            $vacants = Vacant::where('country_id', $country)
             ->where('name', 'LIKE', "%$keyword%")
             ->paginate(4);
+        }else{
+            $vacants == Vacantt::All()->paginate(4);
+        }
+
+
 
         return view('web.vacants.index', compact('vacants'));
     }
