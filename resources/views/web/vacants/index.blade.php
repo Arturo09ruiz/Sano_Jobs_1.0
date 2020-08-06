@@ -20,6 +20,8 @@
   <script src="{{ asset('vendor/jquery/jquery.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}" type="text/javascript"></script>
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 </head>
 <body class="body-color-test" >
 
@@ -372,7 +374,7 @@
 
                             </div>
                             <div class="col-md-10">
-                                <button class="btn btn-white">
+                                <button id="search-f" class="search-f btn btn-white">
                                     <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar Busqueda</span>
                                 </button>
                             </div>
@@ -566,10 +568,13 @@
 
 
 
-
     <script>
         $(document).ready(function() {
         $('.js-example-basic-single').select2();
+    });
+
+    $( "#search-f" ).on( "click", function() {
+        alert("hola");
     });
     </script>
     </body>

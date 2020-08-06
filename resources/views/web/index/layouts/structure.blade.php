@@ -72,6 +72,7 @@
         });
 
 
+
         $("#cuncils").click(function(){
             document.getElementById('text_henry').className = 'henry_change';
 	    });
