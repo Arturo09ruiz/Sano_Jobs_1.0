@@ -312,7 +312,9 @@
                             <div>
                               <select class="js-example-basic-single form-control" name="" id="">
                                 <option value="" disabled selected>Seleccionar Categoria</option>
-                               
+                                @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
                             </select>
                             </div>
 
