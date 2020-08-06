@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Vacant;
 use App\Category;
+use App\Country;
 
 class VacantsController extends Controller
 {
@@ -21,9 +22,10 @@ class VacantsController extends Controller
         }
 
         $categories = Category::all();
+        $countries = Country::all();
 
 
-        return view('web.vacants.index', compact('vacants' ,'categories'));
+        return view('web.vacants.index', compact('vacants' ,'categories', 'countries'));
     }
 
 

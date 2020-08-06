@@ -250,10 +250,7 @@
                 <div>
                   <select class="js-example-basic-single form-control" name="" id="">
                     <option value="" disabled selected>Selecciona Tu Pais</option>
-                    <option value="">Peru </option>
-                    <option value="">Venezuela</option>
-                    <option value="">Colombia</option>
-                    <Option>China</Option>
+              
                 </select>
                 </div>
               <div>
