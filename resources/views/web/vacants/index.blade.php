@@ -353,7 +353,7 @@
                                 <option value="" disabled selected>Selecciona Tu Consejo</option>
 
                             </select>
-                            
+
                     <p id="text_henry" class="henry_hover">*Si no está seguro sobre su Consejo de Coordinación, consulte con sus Líderes</p>
 
                         </div>
@@ -371,9 +371,9 @@
                         <div>
 
                             <label>Fecha Límite</label>
-                            <input class="form-control" type="date">
+                            <input id="deadline" class="form-control" type="date">
                             <label>Fecha de Publicación</label>
-                            <input class="form-control" type="date">
+                            <input id="created" class="form-control" type="date">
                         </div>
 
                         <br>
@@ -589,8 +589,14 @@
 
             $keyword = $('#search_vacants').val();
             $category = $('#select_categories').val();
+            $country = $('#country').val();
+            $council = $('#cuncils').val();
+            $city = $('#cities').val();
+            $deadline = $('#deadline').val();
+            $created = $('#created').val();
+      
 
-            alert($category)
+
 
             if($keyword == ""){
 
