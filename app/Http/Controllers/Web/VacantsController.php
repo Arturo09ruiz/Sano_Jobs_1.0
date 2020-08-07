@@ -18,7 +18,14 @@ class VacantsController extends Controller
             ->where('name', 'LIKE', "%$keyword%")
             ->paginate(4);
         }else{
-            $vacants == Vacantt::All()->paginate(4);
+            echo $keyword;
+            echo $country;
+            echo $council;
+            echo $city;
+            echo $deadline;
+            echo $created;
+            echo $category;
+
         }
 
         $categories = Category::all();

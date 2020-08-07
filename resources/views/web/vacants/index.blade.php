@@ -413,7 +413,6 @@
 
 
 
-
             <!-- ESCRITORIO -->
             <div class="test-div-view-desk col-8">
                 @foreach ($vacants as $vacant)
@@ -548,6 +547,8 @@
         </div>
     </div>
 
+<br>
+<br>
 
     <footer class="footer">
         <div class="container">
@@ -606,33 +607,17 @@
             $created = $('#created').val();
 
 
-            if($keyword == ""){
-                 document.getElementById('info_test').className = 'test_show';
+
+
+            if($keyword == "", $category == "", $country == "", $council == "", $city == "", $deadline == "", $created ==""){
+                document.getElementById('info_test').className = 'test_show';
+            }else{
+                window.location = "/vacantes-de-trabajo/Palabra_clave=" + $keyword + "/" + $country + "/" + $council + "/" + $city + "/" + $deadline + "/" + $created + "/" + $category;
             }
 
-            if($category == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
 
-            if($country == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
 
-            if($council == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
 
-            if($city == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
-
-            if($deadline == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
-
-            if($created == ""){
-                document.getElementById('info_test').className = 'test_show';
-            }
         });
 
 
