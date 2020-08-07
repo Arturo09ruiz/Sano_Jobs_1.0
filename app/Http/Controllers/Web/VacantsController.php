@@ -28,9 +28,9 @@ class VacantsController extends Controller
             ->paginate(4);
         }
 
+        
         $categories = Category::all();
         $countries = Country::all();
-
 
         return view('web.vacants.index', compact('vacants' ,'categories', 'countries'));
     }

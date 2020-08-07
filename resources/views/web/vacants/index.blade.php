@@ -431,11 +431,15 @@
                                     <div class="col-6">
                                         <h5 class="card-title">Requerimientos:</h5>
 
-                                        {{-- @foreach ($vacant->requirements as $requerimient)
-                                            <li class="font-mini">
-                                                {{ $requerimient->nombre }}
-                                            </li>
-                                        @endforeach --}}
+                                        <?php
+                                            $requirements = $vacant->requirements;
+                                            $test = json_decode($requirements);
+
+                                            foreach ($test as $key => $value) {
+                                                echo '<li class="font-mini">' . $value->nombre . ' </li>';
+
+                                            }
+                                        ?>
 
 
                                     </div>
