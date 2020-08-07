@@ -28,7 +28,6 @@
 <style>
     .henry_hover{
         text-align: center;
-        display: none;
     }
     .henry_change{
         text-align: center;
@@ -379,6 +378,7 @@
                         <br>
 
                     </li>
+
                     <div class="row">
                         <div class="col-md-2">
 
@@ -388,10 +388,16 @@
                                 <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar
                                     Busqueda</span>
                             </button>
+
                         </div>
                         <div class="col-md-1">
 
                         </div>
+
+                    </div>
+                    <div>
+                        <br>
+                        <p id="text_henry" class="henry_hover">*Para Realizar Una Búsqueda debe rellenar todo el formulario</p>
                     </div>
 
                 </div>
@@ -594,8 +600,6 @@
             $city = $('#cities').val();
             $deadline = $('#deadline').val();
             $created = $('#created').val();
-      
-
 
 
             if($keyword == ""){
