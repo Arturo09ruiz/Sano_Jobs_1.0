@@ -359,7 +359,6 @@
 
                             </select>
 
-                    <p id="text_henry" class="henry_hover">*Si no está seguro sobre su Consejo de Coordinación, consulte con sus Líderes</p>
 
                         </div>
 
