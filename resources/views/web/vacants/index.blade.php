@@ -35,6 +35,12 @@
         font-size: 12px;
         color:#c7c7c7;
     }
+    .test_info{
+        display: none;
+    }
+    .test_show{
+        display: block;
+    }
 </style>
 <body class="body-color-test">
 
@@ -395,7 +401,7 @@
                         </div>
 
                     </div>
-                    <div>
+                    <div class="test_info" id="info_test">
                         <br>
                         <p id="text_henry" class="henry_hover">*Para Realizar Una Búsqueda debe rellenar todo el formulario</p>
                     </div>
@@ -584,9 +590,7 @@
 
 
     <script>
-         $("#cuncils").click(function(){
-            document.getElementById('text_henry').className = 'henry_change';
-	    });
+
         $(document).ready(function() {
             $('.js-example-basic-single').select2();
         });
@@ -603,15 +607,32 @@
 
 
             if($keyword == ""){
-
+                 document.getElementById('info_test').className = 'test_show';
             }
 
             if($category == ""){
-
+                document.getElementById('info_test').className = 'test_show';
             }
 
+            if($country == ""){
+                document.getElementById('info_test').className = 'test_show';
+            }
 
+            if($council == ""){
+                document.getElementById('info_test').className = 'test_show';
+            }
 
+            if($city == ""){
+                document.getElementById('info_test').className = 'test_show';
+            }
+
+            if($deadline == ""){
+                document.getElementById('info_test').className = 'test_show';
+            }
+
+            if($created == ""){
+                document.getElementById('info_test').className = 'test_show';
+            }
         });
 
 
