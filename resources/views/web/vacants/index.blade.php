@@ -25,7 +25,18 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
 </head>
-
+<style>
+    .henry_hover{
+        text-align: center;
+        display: none;
+    }
+    .henry_change{
+        text-align: center;
+        display: block !important;
+        font-size: 12px;
+        color:#c7c7c7;
+    }
+</style>
 <body class="body-color-test">
 
 
@@ -310,14 +321,14 @@
 
 
                     <h5 class="list-black texto-negro mt-3 centrado">Filtros:</h5>
-                    <input placeholder="Buscar" class="MVRT form-control">
+                    <input id="search_vacants" placeholder="Buscar" class="MVRT form-control">
                     <br>
 
                     <li class="points">
 
                         <a class="list-black" href="#">Categorias:</a>
                         <div>
-                            <select class="js-example-basic-single form-control" name="" id="">
+                            <select class="js-example-basic-single form-control" name="select_categories" id="select_categories">
                                 <option value="" disabled selected>Seleccionar Categoria</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -329,7 +340,7 @@
 
                         <a class="list-black" href="#">Ubicación:</a>
                         <div>
-                            <select class="js-example-basic-single form-control" name="" id="">
+                            <select class=" js-example-basic-single form-control" id="country">
                                 <option value="" disabled selected>Selecciona Tu Pais</option>
                                 @foreach ($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -338,24 +349,19 @@
                         </div>
                         <div>
                             <br>
-                            <select class="js-example-basic-single form-control" name="" id="">
-                                <option value="" disabled selected>Seleccionar Consejo </option>
-                                <option value="">Maracaibo</option>
-                                <option value="">Caracas</option>
-                                <option value="">Barcelona</option>
-                                <Option>Valencia</Option>
+                            <select id="cuncils" class="js-example-basic-single form-control cuncils" name="">
+                                <option value="" disabled selected>Selecciona Tu Consejo</option>
+
                             </select>
+                            
+                    <p id="text_henry" class="henry_hover">*Si no está seguro sobre su Consejo de Coordinación, consulte con sus Líderes</p>
+
                         </div>
 
                         <div>
-
                             <br>
-                            <select class="js-example-basic-single form-control" name="" id="">
+                            <select class="js-example-basic-single form-control" name="" id="cities">
                                 <option value="" disabled selected>Selecciona La Ciudad</option>
-                                <option value="">Ciudad Bolivar</option>
-                                <option value="">Caracas</option>
-                                <option value="">Barcelona</option>
-                                <Option>Puerto la Cruz </Option>
                             </select>
 
                         </div>
@@ -572,13 +578,98 @@
 
 
     <script>
+         $("#cuncils").click(function(){
+            document.getElementById('text_henry').className = 'henry_change';
+	    });
         $(document).ready(function() {
             $('.js-example-basic-single').select2();
         });
 
         $("#search-f").on("click", function() {
-            alert("hola");
+
+            $keyword = $('#search_vacants').val();
+            $category = $('#select_categories').val();
+
+            alert($category)
+
+            if($keyword == ""){
+
+            }
+
+            if($category == ""){
+
+            }
+
+
+
         });
+
+
+        $("#country").change(function(e){
+          console.log(e);
+          var country_id =
+          searchCouncils(e.target.value);
+        });
+
+        function searchCouncils(country_id){
+          $.ajax({
+            url: "http://127.0.0.1:8000/councils/getcouncils",
+            type: "POST",
+            data:{
+              id: country_id,
+              _token:'{{ csrf_token() }}'
+            },
+            cache: false,
+            dataType: 'json',
+            success: function(dataResult){
+              var councils = dataResult.data;
+              var bodyData = '';
+              if (councils.length === 0 ) {
+                bodyData+='<option value="" disabled selected>Selecciona el Consejo</option>';
+                $("#cuncils").html(bodyData);
+              }else{
+                $.each(councils,function(index,row){
+                  bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                })
+                $("#cuncils").html(bodyData);
+              }
+            }
+          });
+        }
+
+
+
+        $("#cuncils").change(function(e){
+          console.log(e);
+          var council_id =
+          searchCities(e.target.value);
+        });
+
+        function searchCities(council_id){
+          $.ajax({
+            url: "http://127.0.0.1:8000/cities/getcities",
+            type: "POST",
+            data:{
+              id: council_id,
+              _token:'{{ csrf_token() }}'
+            },
+            cache: false,
+            dataType: 'json',
+            success: function(dataResult){
+              var cities = dataResult.data;
+              var bodyData = '';
+              if (cities.length === 0 ) {
+                bodyData+='<option value="" disabled selected>Selecciona La Ciudad</option>';
+                $("#cities").html(bodyData);
+              }else{
+                $.each(cities,function(index,row){
+                  bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                })
+                $("#cities").html(bodyData);
+              }
+            }
+          });
+        }
 
     </script>
 </body>
