@@ -18,14 +18,14 @@ class VacantsController extends Controller
             ->where('name', 'LIKE', "%$keyword%")
             ->paginate(4);
         }else{
-            echo $keyword;
-            echo $country;
-            echo $council;
-            echo $city;
-            echo $deadline;
-            echo $created;
-            echo $category;
-
+            $vacants = Vacant::where('country_id', $country)
+            ->where('conuncil_id', $council)
+            ->where('city_id', $city)
+            ->where('category_id', $category)
+            ->where('deadline', $deadline)
+            ->where('created_at', 'LIKE', "%$created%")
+            ->where('name', 'LIKE', "%$keyword%")
+            ->paginate(4);
         }
 
         $categories = Category::all();
