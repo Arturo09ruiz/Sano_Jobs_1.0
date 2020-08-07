@@ -42,6 +42,39 @@
         display: block;
     }
 </style>
+
+    <script>
+            function mostrar(){
+            var prueba= document.getElementById('mostrarOcultar');
+            var pruebados = prueba.classList;
+                if(pruebados == "mag" ){
+                    document.getElementById('mostrarOcultar').className = 'valeria';
+                }else if(pruebados == "valeria"){
+                    document.getElementById('mostrarOcultar').className = 'mag';
+                }
+        }
+        function view(){
+
+        var filter = document.getElementById('filter');
+        var filtertwo = filter.classList;
+        if(filtertwo == "filter-nop" ){
+                    document.getElementById('filter').className = 'filter-view';
+                }else if(filtertwo == "filter-view"){
+                    document.getElementById('filter').className = 'filter-nop';
+                }
+        }
+        function viewtest(){
+
+            var po= document.getElementById('view-test-list');
+            var ds = po.classList;
+                if(ds == "mag" ){
+                    document.getElementById('view-test-list').className = 'valeria';
+                }else if(ds == "valeria"){
+                    document.getElementById('view-test-list').className = 'mag';
+                }
+        }
+
+    </script>
 <body class="body-color-test">
 
 
