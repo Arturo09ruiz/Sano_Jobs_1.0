@@ -41,6 +41,10 @@
     .test_show{
         display: block;
     }
+    .btn-search-now{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 
     <script>
@@ -279,31 +283,24 @@
                 </a>
 
                 <div class="filter-nop" id="filter">
-                    <input placeholder="Buscar" class="MVRT form-control">
+                    <input id="search_vacants" placeholder="Buscar" class="MVRT form-control">
                     <br>
                     <li class="points">
+                        <a class="list-black" href="#">Categorias:</a>
+                        <div>
+                            <select class="js-example-basic-single form-control" name="select_categories" id="select_categories">
+                                <option value="" disabled selected>Seleccionar Categoria</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
-                    <li><a class="dropdown-toggle list-black" onclick="viewtest();" href="#">Categorias</a></li>
-                    <div class="mag" id="view-test-list">
-                        <ul class="points">
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-                            <li class="points font-body-text-black"><input type="checkbox"> Construcción</li>
-
-                        </ul>
-                    </div>
                     <br>
 
                     <a class="list-black" href="#">Ubicación:</a>
                     <div>
-                        <select class="js-example-basic-single form-control" name="" id="">
+                        <select class=" js-example-basic-single form-control" id="country">
                             <option value="" disabled selected>Selecciona Tu Pais</option>
                             @foreach ($countries as $country)
                                 <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -312,26 +309,18 @@
                     </div>
                     <div>
                         <br>
-                        <select class="js-example-basic-single form-control" name="" id="">
-                            <option value="" disabled selected>Seleccionar Consejo </option>
-                            <option value="">Maracaibo</option>
-                            <option value="">Caracas</option>
-                            <option value="">Barcelona</option>
-                            <Option>Valencia</Option>
+                        <select id="cuncils" class="js-example-basic-single form-control cuncils" name="">
+                            <option value="" disabled selected>Selecciona Tu Consejo</option>
+
                         </select>
                     </div>
 
                     <div>
 
                         <br>
-                        <select class="js-example-basic-single form-control" name="" id="">
+                        <select class="js-example-basic-single form-control" name="" id="cities">
                             <option value="" disabled selected>Selecciona La Ciudad</option>
-                            <option value="">Ciudad Bolivar</option>
-                            <option value="">Caracas</option>
-                            <option value="">Barcelona</option>
-                            <Option>Puerto la Cruz </Option>
                         </select>
-
                     </div>
                     <br>
 
@@ -339,14 +328,32 @@
                     <div>
 
                         <label>Fecha Límite</label>
-                        <input class="form-control" type="date">
+                        <input id="deadline" class="form-control" type="date">
                         <label>Fecha de Publicación</label>
-                        <input class="form-control" type="date">
+                        <input id="created" class="form-control" type="date">
                     </div>
 
                     <br>
 
                     </li>
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-8">
+                            <div class="btn-search-now">
+                                <button id="search-f" class="btn btn-white">
+                                    <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar
+                                        Busqueda</span>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="col-2">
+
+                            </div>
+
+                        </div>
+
 
                 </div>
             </div>
@@ -421,14 +428,13 @@
                         <div class="col-md-2">
 
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <button id="search-f" class="search-f btn btn-white">
                                 <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar
                                     Busqueda</span>
                             </button>
-
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-2">
 
                         </div>
 
