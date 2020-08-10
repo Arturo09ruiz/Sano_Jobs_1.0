@@ -350,7 +350,7 @@
 
                             <div class="col-2">
                             </div>
-                            
+
                         </div>
 
 
@@ -661,6 +661,39 @@
 
 
         });
+
+
+        $("#country-mobile").change(function(e){
+            console.log(e);
+            var country_id =
+            searchCouncilsMobile(e.target.value);
+        });
+
+        function searchCouncilsMobile(country_id){
+            $.ajax({
+                url: "http://127.0.0.1:8000/councils/getcouncils",
+                type: "POST",
+                data:{
+                id: country_id,
+                _token:'{{ csrf_token() }}'
+                },
+                cache: false,
+                dataType: 'json',
+                success: function(dataResult){
+                var councilsmobile = dataResult.data;
+                var bodyData = '';
+                if (councilsmobile.length === 0 ) {
+                    bodyData+='<option value="" disabled selected>Selecciona el Consejo</option>';
+                    $("#cuncils-mobile").html(bodyData);
+                }else{
+                    $.each(councilsmobile,function(index,row){
+                    bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                    })
+                    $("#cuncils-mobile").html(bodyData);
+                }
+                }
+            });
+        }
 
 
         $("#country").change(function(e){
