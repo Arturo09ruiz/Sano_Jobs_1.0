@@ -568,12 +568,12 @@
                 @endforeach
 
 
-
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                       {{$vacants->render()}}
-                    </ul>
-                </nav>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                        {{$vacants->links()}}
+                        </ul>
+                    </nav>
+                
 
             </div>
 
