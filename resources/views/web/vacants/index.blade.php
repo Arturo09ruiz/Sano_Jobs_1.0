@@ -518,34 +518,32 @@
 
 
             <div class="d-lg-none col-12">
+                @foreach ($vacants as $vacant)
+
                 <br>
                 <div class="border-mag-v">
                     <div class="card">
                         <div class="card-header">
-                            <b class="ramos"> Asistente Administrativo - EXCON C.A / Ciudad Bolívar</b>
+                            <b class="ramos"> {{$vacant->name}} - {{$vacant->business}} / Ciudad Bolívar</b>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Descrición de la Vacante:</h5>
-                            <p class="card-text">La empresa EXCON C.A Busca a un asistente Administrativo, Que se
-                                encargue de Administrar las ventas y los ingresos y egresos del almacen </p>
+                            <p class="card-text">{{$vacant->description}}</p>
                             <div class="row">
                                 <div class="col-6">
                                     <h5 class="card-title">Requerimientos:</h5>
-                                    <li class="font-mini">
-                                        Puntualidad
-                                    </li>
-                                    <li class="font-mini">
-                                        Amabilidad
-                                    </li>
-                                    <li class="font-mini">
-                                        Ganas de Salir Adelante
-                                    </li>
-                                    <li class="font-mini">
-                                        Conocimiento
-                                    </li>
-                                    <li class="font-mini">
-                                        Experiencia
-                                    </li>
+
+                                    <?php
+                                        $requirements = $vacant->requirements;
+                                        $test = json_decode($requirements);
+
+                                        foreach ($test as $key => $value) {
+                                            echo '<li class="font-mini">' . $value->nombre . ' </li>';
+
+                                        }
+                                    ?>
+
+
                                 </div>
                                 <div class="col-6">
                                     <div class="boton-aling">
@@ -566,6 +564,8 @@
                     </div>
                 </div>
                 <br>
+
+                @endforeach
 
 
 
