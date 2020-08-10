@@ -696,6 +696,39 @@
         }
 
 
+            $("#cuncils-mobile").change(function(e){
+                console.log(e);
+                var council_id =
+                searchCitiesMobile(e.target.value);
+            });
+
+            function searchCitiesMobile(council_id){
+                $.ajax({
+                    url: "http://127.0.0.1:8000/cities/getcities",
+                    type: "POST",
+                    data:{
+                    id: council_id,
+                    _token:'{{ csrf_token() }}'
+                    },
+                    cache: false,
+                    dataType: 'json',
+                    success: function(dataResult){
+                    var citiesmobile = dataResult.data;
+                    var bodyData = '';
+                    if (citiesmobile.length === 0 ) {
+                        bodyData+='<option value="" disabled selected>Selecciona La Ciudad</option>';
+                        $("#cities-mobile").html(bodyData);
+                    }else{
+                        $.each(citiesmobile,function(index,row){
+                        bodyData+='<option value="'+row.id+'"  >'+row.name+'</option>';
+                        })
+                        $("#cities-mobile").html(bodyData);
+                    }
+                    }
+                });
+            }
+
+
         $("#country").change(function(e){
           console.log(e);
           var country_id =
