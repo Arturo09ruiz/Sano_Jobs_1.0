@@ -13,7 +13,7 @@ $("#search-mobile").on("click", function() {
 
 
     if($keyword == "", $category == "", $country == "", $council == "", $city == "", $deadline == "", $created ==""){
-        document.getElementById('info_test').className = 'test_show';
+        document.getElementById('info_test_mobile').className = 'test_show';
     }else{
         window.location = "/vacantes-de-trabajo/Palabra_clave=" + $keyword + "/" + $country + "/" + $council + "/" + $city + "/" + $deadline + "/" + $created + "/" + $category;
     }
