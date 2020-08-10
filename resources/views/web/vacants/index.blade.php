@@ -283,12 +283,12 @@
                 </a>
 
                 <div class="filter-nop" id="filter">
-                    <input id="search_vacants" placeholder="Buscar" class="MVRT form-control">
+                    <input id="search_vacants_mobile" placeholder="Buscar" class="MVRT form-control">
                     <br>
                     <li class="points">
                         <a class="list-black" href="#">Categorias:</a>
                         <div>
-                            <select class="js-example-basic-single form-control" name="select_categories" id="select_categories">
+                            <select class="js-example-basic-single form-control" name="select_categories-mobile" id="select_categories-mobile">
                                 <option value="" disabled selected>Seleccionar Categoria</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -300,7 +300,7 @@
 
                     <a class="list-black" href="#">Ubicación:</a>
                     <div>
-                        <select class=" js-example-basic-single form-control" id="country">
+                        <select class=" js-example-basic-single form-control" id="country-mobile">
                             <option value="" disabled selected>Selecciona Tu Pais</option>
                             @foreach ($countries as $country)
                                 <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -309,7 +309,7 @@
                     </div>
                     <div>
                         <br>
-                        <select id="cuncils" class="js-example-basic-single form-control cuncils" name="">
+                        <select id="cuncils-mobile" class="js-example-basic-single form-control cuncils-mobile" name="">
                             <option value="" disabled selected>Selecciona Tu Consejo</option>
 
                         </select>
@@ -318,7 +318,7 @@
                     <div>
 
                         <br>
-                        <select class="js-example-basic-single form-control" name="" id="cities">
+                        <select class="js-example-basic-single form-control" name="" id="cities-mobile">
                             <option value="" disabled selected>Selecciona La Ciudad</option>
                         </select>
                     </div>
@@ -328,9 +328,9 @@
                     <div>
 
                         <label>Fecha Límite</label>
-                        <input id="deadline" class="form-control" type="date">
+                        <input id="deadline-mobile" class="form-control" type="date">
                         <label>Fecha de Publicación</label>
-                        <input id="created" class="form-control" type="date">
+                        <input id="created-mobile" class="form-control" type="date">
                     </div>
 
                     <br>
@@ -338,20 +338,19 @@
                     </li>
                         <div class="row">
                             <div class="col-2">
-
                             </div>
                             <div class="col-8">
                             <div class="btn-search-now">
-                                <button id="search-f" class="btn btn-white">
+                                <button id="search-mobile" class="btn btn-white">
                                     <span class="test-grande icon-btn-prueba   nav-link-inner--text">Realizar
                                         Busqueda</span>
                                 </button>
                             </div>
                             </div>
+
                             <div class="col-2">
-
                             </div>
-
+                            
                         </div>
 
 
@@ -630,6 +629,7 @@
 
 
 
+    <script src="{{ asset('js/1.js') }}" type="text/javascript"></script>
 
 
     <script>
