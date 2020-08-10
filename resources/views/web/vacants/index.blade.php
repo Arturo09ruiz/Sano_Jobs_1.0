@@ -350,10 +350,16 @@
 
                             <div class="col-2">
                             </div>
-                            <div class="test_info" id="info_test_mobile">
-                                <br>
-                                <p id="text_henry" class="henry_hover">*Para Realizar Una Búsqueda debe rellenar todo el formulario</p>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="test_info" id="info_test_mobile">
+                                    <br>
+                                    <p id="text_henry" class="henry_hover">*Para Realizar Una Búsqueda debe rellenar todo el formulario</p>
+                                </div>
                             </div>
+                            <div class="col-1"></div>
+
+
 
                         </div>
 
@@ -573,7 +579,7 @@
                         {{$vacants->links()}}
                         </ul>
                     </nav>
-                
+
 
             </div>
 
