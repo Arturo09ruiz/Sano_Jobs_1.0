@@ -25,7 +25,6 @@
                         @if ($page == $paginator->currentPage())
                             <li class="page-item active" aria-current="page"><span class="page-link">{{ $page }}</span></li>
                         @else
-
                         @endif
                     @endforeach
                 @endif
